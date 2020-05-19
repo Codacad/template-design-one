@@ -13,8 +13,7 @@ app.use(expressLayout);
 app.use(express.static('views'));
 
 // DB Connection
-console.log(process.env.mongo_URI)
-mongoose.connect(process.env.mongo_URI, {
+mongoose.connect(process.env.mongo_URI || MONGODB_URI, {
     useNewUrlParser:true,
     useUnifiedTopology:true
 })

@@ -24,68 +24,7 @@ body{
     box-sizing: border-box;
     background-color: #f7f7ff;
 }
-// Social Profiles
-div.social-profiles{
-    width: 100%;
-    box-sizing: border-box;
-    position: relative;
-    padding: .5em;
-    div.profiles{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        a{
-            font-size: 1.7rem;
-            margin: 0px 10px;
-            color: rgba(12, 87, 247, 0.6);
-            position: relative;            
-            span.title{
-                position: absolute;
-                top: 40px;
-                font-size: 12px;
-                color:#fff;
-                // background-color:#333;
-                background-color: rgba(12, 87, 247, 1);
-                padding: .2em .5em;
-                visibility: hidden;
-                opacity: 0;
-                left: 0;
-                transition: 200ms;
-                transform: translateY(10px);
-                border-radius: 3px;
-            }
-            span::before{
-                content: '';
-                position: absolute;
-                width:8px;
-                height:8px;
-                transform: rotate(45deg);
-                background-color: rgba(12, 87, 247, 1);
-                top: -4px;
-                z-index: -100;
-            }
-        }
-        a:hover{
-            color: rgba(12, 87, 247, 0.8);
-        }
-        a:hover span.title{
-            transform: translateY(0px);
-            transition: 200ms;
-            visibility: visible;
-            opacity: 1;
-        }
-    }
-    div#close{
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        a{
-            color: rgba(0,0,0,.6);
-            font-weight: 400;        
-        }
-    }
-}
+
 // Navbar
 nav#navbar{
     width: 100%;
@@ -93,12 +32,12 @@ nav#navbar{
     position: relative;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 10;
     line-height: 55px;
     // border-bottom: 1px solid $colorTwo;
-    // box-shadow: 0px 1px 1px rgba(0,0,0,.2);
-    background-color: rgba(0, 89, 255, 0.123);
-        // background-color:rgba(12, 87, 247, 0.6);
+    box-shadow: 0px 2px 10px rgba(0,0,0,.5);
+    // background-color: rgba(0, 89, 255, 0.123);
+        background-color:cornflowerblue;
     a.brand-logo{
         box-sizing: border-box;
         float: left;
@@ -112,24 +51,54 @@ nav#navbar{
             color: orange;
         }
         span.acad{
-            color:cornflowerblue;
+            color:#fff;
         }
     }
     ul{
         list-style: none;
+        li a.courses{
+            position: relative;
+            margin-right:10px;
+        }
+        li a.courses::after{
+            content: "";
+            width: 7px;
+            height: 7px;
+            display: block;
+            position: absolute;
+            top: 37%;
+            right: -14px;
+            transform: rotate(45deg);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+            border-right: 2px solid rgba(255, 255, 255, 0.7);
+            transition: 200ms;
+            margin-right:10px;        
+        }
+        li:hover a.courses::after{
+            content: "";
+            width: 7px;
+            height: 7px;
+            display: block;
+            position: absolute;
+            top: 47%;
+            right: -14px;
+            transform: rotate(225deg);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+            border-right: 2px solid rgba(255, 255, 255, 0.7);
+        }
         li{
             float: left;
             a{
                 font-weight:500;
                 box-sizing: border-box;
                 text-decoration: none;
-                color:$colorFive;
+                color:rgba(255, 255, 255, 0.7);
                 padding: 13px;
                 // color:rgba(255, 255, 255, 0.493);
                 // transition: 200ms ease-in-out;   
             }
             a:hover{                
-                color: $colorFour;
+                color: rgba(255, 255, 255, .8);
                 // transition: 200ms ease-in-out;   
             }
             ul{
@@ -267,6 +236,7 @@ div.container-fluid{
                         text-align: center;
                         margin-top:20px;
                         border-radius: 3px;
+                        color:$colorSeven;
                     }
                     
                 }
@@ -501,6 +471,157 @@ div.team{
         div.developer:hover{
             transform: scale(1);
         }
+        div#developer-one{
+            @keyframes rotate-image {
+                0%{
+                    transform:rotate(0deg)
+                }
+                100%{
+                    transform: rotate(360deg);
+                }
+            }
+            div.header{                
+                div.profile-pic{
+                    position: relative;
+                    box-sizing: border-box;
+                    width: 120px;
+                    height: 120px;
+                    margin: auto;
+                    border: 5px solid cornflowerblue;
+                    border-right: 5px solid orange;
+                    border-left: 5px solid orange;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    // animation: rotate-image 1s linear infinite;
+                    div.img{
+                        position: absolute;
+                        box-sizing: border-box;
+                        background-image: url('../images/Photo_2.jpg');
+                        display:block;   
+                        margin: auto;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        border-radius: 50%;
+                        width: 100px;
+                        height: 100px;                    
+                    }
+                }
+            }
+        }
+        div#developer-two{
+            div.header{                
+                div.profile-pic{
+                    box-sizing: border-box;
+                    width: 120px;
+                    height: 120px;
+                    margin: auto;
+                    border: 5px solid cornflowerblue;
+                    border-right: 5px solid orange;
+                    border-left: 5px solid orange;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    div.img{
+                        box-sizing: border-box;
+                        background-image: url('https://www.jodilogik.com/wordpress/wp-content/uploads/2016/05/people-1.png');
+                        display:block;   
+                        margin: auto;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        border-radius: 50%;
+                        width: 100px;
+                        height: 100px;                    
+                    }
+                }
+            }
+        }
+        div#developer-three{
+            div.header{                
+                div.profile-pic{
+                    box-sizing: border-box;
+                    width: 120px;
+                    height: 120px;
+                    margin: auto;
+                    border: 5px solid cornflowerblue;
+                    border-right: 5px solid orange;
+                    border-left: 5px solid orange;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    div.img{
+                        box-sizing: border-box;
+                        background-image: url('https://www.jodilogik.com/wordpress/wp-content/uploads/2016/05/people-1.png');
+                        display:block;   
+                        margin: auto;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        border-radius: 50%;
+                        width: 100px;
+                        height: 100px;                    
+                    }
+                }
+            }
+        }
+        div#developer-four{
+            div.header{                
+                div.profile-pic{
+                    box-sizing: border-box;
+                    width: 120px;
+                    height: 120px;
+                    margin: auto;
+                    border: 5px solid cornflowerblue;
+                    border-right: 5px solid orange;
+                    border-left: 5px solid orange;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    div.img{
+                        box-sizing: border-box;
+                        background-image: url('https://www.jodilogik.com/wordpress/wp-content/uploads/2016/05/people-1.png');
+                        display:block;   
+                        margin: auto;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        border-radius: 50%;
+                        width: 100px;
+                        height: 100px;                    
+                    }
+                }
+            }
+        }
+        div#developer-five{
+            div.header{                
+                div.profile-pic{
+                    box-sizing: border-box;
+                    width: 120px;
+                    height: 120px;
+                    margin: auto;
+                    border: 5px solid cornflowerblue;
+                    border-right: 5px solid orange;
+                    border-left: 5px solid orange;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    div.img{
+                        box-sizing: border-box;
+                        background-image: url('https://www.jodilogik.com/wordpress/wp-content/uploads/2016/05/people-1.png');
+                        display:block;   
+                        margin: auto;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        border-radius: 50%;
+                        width: 100px;
+                        height: 100px;                    
+                    }
+                }
+            }
+        }
         div.developer{
             margin: 10px;
             width: 300px;
@@ -512,6 +633,8 @@ div.team{
             box-shadow: 0px 0px 50px rgba(0,0,0,.6);
             transform: scale(.9);
             transition: 200ms;
+            border-bottom: 10px solid cornflowerblue;
+            border-top: 10px solid cornflowerblue;
             cursor: auto;
             div.header{
                 div.profile-pic img{
@@ -552,7 +675,85 @@ div.team{
         }
     }
 }
+div#contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width:100%;
+    min-height:100vh;
+    div.content{
+        box-sizing: border-box;
+        width:50%;
+        margin: auto;
+        border: 1px solid rgba(0,0,0,.1);
+        padding:1em;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        border-radius: 5px;
+        align-items: center;
+        box-shadow: 0px 0px 40px rgba(0,0,0,.1);
+        div.contact-detail{
+            box-shadow: 0px 0px 40px rgba(0,0,0,.1);
+            position: absolute;
+            border:1px solid rgba(0,0,0,.2);
+            width: 400px;
+            left: -75%;
+            transform: translateX(80%);
+            background-color:#fff;
+            box-sizing: border-box;
+            padding:1em;
+            border-radius: 5px;
+            div.address, div.email, div.phone{
+                margin: 20px 0px;
+                display:flex;            
+                strong{
+                    flex: 1;
+                    span.icon{
+                        margin-right: 10px;
+                    }
+                }
+                .text{
+                    flex: 1;
+                }
+            }
+        }
+        div.message{    
+            width: 400px;
+            margin-left: auto;
+            box-sizing: border-box;
+            padding: 20px;
 
+            div.heading{
+                h1{
+                    margin-bottom: 20px;
+                    color: $colorFive;
+                    font-size: 1.5rem;
+                }
+            }
+            div.form-group{
+                margin:20px 0px;
+                position: relative;
+                input.form-control{
+                    border: none;
+                    outline:none;
+                    border-bottom: 1px solid rgba(0,0,0,.5);
+                    background-color: none;
+                    padding: 5px 10px;
+                    width:100%;
+                    position: relative;
+                    z-index: 0;
+                }
+                label{
+                    position: relative;
+                    top: 20px;
+                    z-index: 1;
+                    
+                }
+            }
+        }
+    }
+}
 div.footer{
     background-color: rgba(0, 89, 255, 0.123); 
     padding: 2em; 
