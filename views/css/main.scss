@@ -35,9 +35,9 @@ nav#navbar{
     z-index: 10;
     line-height: 55px;
     // border-bottom: 1px solid $colorTwo;
-    box-shadow: 0px 2px 10px rgba(0,0,0,.5);
+    // box-shadow: 0px 2px 10px rgba(0,0,0,.5);
     // background-color: rgba(0, 89, 255, 0.123);
-        background-color:cornflowerblue;
+        // background-color:cornflowerblue;
     a.brand-logo{
         box-sizing: border-box;
         float: left;
@@ -51,7 +51,7 @@ nav#navbar{
             color: orange;
         }
         span.acad{
-            color:#fff;
+            color:cornflowerblue;
         }
     }
     ul{
@@ -69,8 +69,8 @@ nav#navbar{
             top: 37%;
             right: -14px;
             transform: rotate(45deg);
-            border-bottom: 2px solid rgba(255, 255, 255, 0.7);
-            border-right: 2px solid rgba(255, 255, 255, 0.7);
+            border-bottom: 2px solid $colorSix;
+            border-right: 2px solid $colorSix;
             transition: 200ms;
             margin-right:10px;        
         }
@@ -83,8 +83,8 @@ nav#navbar{
             top: 47%;
             right: -14px;
             transform: rotate(225deg);
-            border-bottom: 2px solid rgba(255, 255, 255, 0.7);
-            border-right: 2px solid rgba(255, 255, 255, 0.7);
+            border-bottom: 2px solid $colorSeven;
+            border-right: 2px solid $colorSeven;
         }
         li{
             float: left;
@@ -92,13 +92,12 @@ nav#navbar{
                 font-weight:500;
                 box-sizing: border-box;
                 text-decoration: none;
-                color:rgba(255, 255, 255, 0.7);
+                color:$colorSix;
                 padding: 13px;
-                // color:rgba(255, 255, 255, 0.493);
-                // transition: 200ms ease-in-out;   
+                
             }
             a:hover{                
-                color: rgba(255, 255, 255, .8);
+                color: $colorSeven;
                 // transition: 200ms ease-in-out;   
             }
             ul{
@@ -163,25 +162,28 @@ nav#navbar{
         a{
             padding: 5px 10px;
             margin-left: 5px;
-            background-color: rgba(12, 87, 247, .9);
             text-decoration: none;
             border-radius: 3px;
-            color: $colorSeven;            
+            color: $colorFive;            
             transition: 200ms ease-in-out;
             color: $colorFive;
-            border: 1px solid $colorThree;
+            border: 1px solid $colorFive;
             color: #fff;
+            background-color: $colorSix;
         }
         a:hover{
-            background-color: rgba(12, 87, 247, 1);
+            background-color: $colorSeven;
         }
         a:nth-child(1){
-            background-color: rgba(0,0,0,.0);
-            border: 1px solid rgba(0,0,0,.3);
-            color: $colorFive;
+            border: 1px solid $colorFive;
+            color: $colorFive;           
+           border-radius: 3px;
+           background-color: #f7f7f7;
         }
         a:nth-child(1):hover{
-            background-color: rgba(0,0,0,.05);
+            background-color: $colorSeven;
+            color: #fff;
+            border: 1px solid $colorEight;
         }
     }
 }
@@ -243,13 +245,13 @@ div.container-fluid{
             }
             div.learn-more{
                 display: flex;
-                justify-content: center;
-                // align-items: center;
+                justify-content:center;
+                align-items:flex-start;
                 box-sizing: border-box;   
                 width: 50%;
                 div.card{
                     max-width: 400px;
-                    box-shadow: 0px 0px 40px rgba(0,0,0,.1);
+                    // box-shadow: 0px 0px 40px rgba(0,0,0,.1);
                     background-color: #f7f7ff;
                     margin-top: 40px;
                     border-radius: 5px;
@@ -447,7 +449,7 @@ div#courses{
 }
 div.team{
     box-sizing: border-box;
-    background-color:rgb(61, 61, 42);
+    background-color:rgba(61, 61, 42,.2);
     width: 100%;
     padding: 1em;
     div.heading{
@@ -464,7 +466,7 @@ div.team{
         justify-content: center;
         align-items: center;        
         flex-wrap: wrap;
-        background-image: url('../images/webDeveloper.svg');
+        background-image: url('../images/web-developer.svg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -488,8 +490,8 @@ div.team{
                     height: 120px;
                     margin: auto;
                     border: 5px solid cornflowerblue;
-                    border-right: 5px solid orange;
-                    border-left: 5px solid orange;
+                    border-right: 5px solid #fff;
+                    border-left: 5px solid #fff;
                     border-radius: 50%;
                     display: flex;
                     justify-content: center;
@@ -518,8 +520,8 @@ div.team{
                     height: 120px;
                     margin: auto;
                     border: 5px solid cornflowerblue;
-                    border-right: 5px solid orange;
-                    border-left: 5px solid orange;
+                    border-right: 5px solid #fff;
+                    border-left: 5px solid #fff;
                     border-radius: 50%;
                     display: flex;
                     justify-content: center;
@@ -546,8 +548,8 @@ div.team{
                     height: 120px;
                     margin: auto;
                     border: 5px solid cornflowerblue;
-                    border-right: 5px solid orange;
-                    border-left: 5px solid orange;
+                    border-right: 5px solid #fff;
+                    border-left: 5px solid #fff;
                     border-radius: 50%;
                     display: flex;
                     justify-content: center;
@@ -574,8 +576,8 @@ div.team{
                     height: 120px;
                     margin: auto;
                     border: 5px solid cornflowerblue;
-                    border-right: 5px solid orange;
-                    border-left: 5px solid orange;
+                    border-right: 5px solid #fff;
+                    border-left: 5px solid #fff;
                     border-radius: 50%;
                     display: flex;
                     justify-content: center;
@@ -602,8 +604,8 @@ div.team{
                     height: 120px;
                     margin: auto;
                     border: 5px solid cornflowerblue;
-                    border-right: 5px solid orange;
-                    border-left: 5px solid orange;
+                    border-right: 5px solid#fff;
+                    border-left: 5px solid #fff;
                     border-radius: 50%;
                     display: flex;
                     justify-content: center;
@@ -635,6 +637,7 @@ div.team{
             transition: 200ms;
             border-bottom: 10px solid cornflowerblue;
             border-top: 10px solid cornflowerblue;
+            background-color: orange;
             cursor: auto;
             div.header{
                 div.profile-pic img{
@@ -656,8 +659,8 @@ div.team{
             }
             div.bio{
                 p{
-                    color: $colorEight;
-                    font-size: 15px;
+                    color: $colorSix;
+                    font-size: 16px;
                 }
             }
             div.social-profiles{
@@ -681,6 +684,7 @@ div#contact{
     align-items: center;    
     width:100%;
     min-height:100vh;
+    background-color:rgb(15, 15, 43);
     div.content{
         box-sizing: border-box;
         width:50%;
@@ -693,6 +697,7 @@ div#contact{
         border-radius: 5px;
         align-items: center;
         box-shadow: 0px 0px 40px rgba(0,0,0,.1);
+        background-color: #f7f7f7;
         div.contact-detail{
             box-shadow: 0px 0px 40px rgba(0,0,0,.1);
             position: absolute;
@@ -723,7 +728,6 @@ div#contact{
             margin-left: auto;
             box-sizing: border-box;
             padding: 20px;
-
             div.heading{
                 h1{
                     margin-bottom: 20px;
