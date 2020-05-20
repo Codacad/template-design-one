@@ -4,6 +4,9 @@ const Router = express.Router();
 Router.get('/', (req, res) => {
     res.render('index');
 })
+Router.get('/blog', (req, res) => {
+    res.render('blog');
+})
 Router.get('/courses',(req, res) => {
     res.render('courses');
 })
