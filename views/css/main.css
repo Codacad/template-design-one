@@ -12,17 +12,19 @@ body {
   font-family: 'Poppins', sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #f7f7ff;
+  background-color: #fff;
 }
 
 nav#navbar {
   width: 100%;
   height: 55px;
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
   line-height: 55px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: #f7f7f7;
 }
 
 nav#navbar a.brand-logo {
@@ -224,27 +226,79 @@ div.container {
           box-sizing: border-box;
   clear: both;
   width: 100%;
-  background-color: #fff;
   padding: 1em;
+  top: 70px;
 }
 
 div.container div#blog {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 75%;
-  margin: auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div.container div#blog div.more-onside {
+  border: 2px solid rgba(0, 0, 0, 0.05);
+  margin-right: 20px;
+  position: fixed;
+  left: 15px;
+  top: 85px;
+  width: 350px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+div.container div#blog div.more-onside div.mores div.heading {
+  text-align: center;
+  padding-top: 10px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+div.container div#blog div.more-onside div.mores div.more {
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  line-height: 1.5em;
+}
+
+div.container div#blog div.more-onside div.mores div.more div.title a {
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+div.container div#blog div.more-onside div.mores div.more div.title a:hover {
+  text-decoration: underline;
+}
+
+div.container div#blog div.more-onside div.mores div.more div.title a h3 {
+  color: #aa2828;
+  font-size: 100%;
+}
+
+div.container div#blog div.more-onside div.mores div.more div.body p {
+  font-size: 15px;
+  color: #333;
+}
+
+div.container div#blog div.more-onside div.mores div.more div.written-by span {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 div.container div#blog div.articles {
+  margin-left: 370px;
   display: block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 div.container div#blog div.articles div.article {
+  background-color: rgba(0, 0, 0, 0.02);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 20px 0px;
+  margin-bottom: 5px;
   border-radius: 3px;
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
@@ -286,7 +340,7 @@ div.container div#blog div.articles div.article div.article-body {
 
 div.container div#blog div.articles div.article div.article-body div.title h1 {
   font-size: 120%;
-  color: teal;
+  color: #4c5b69;
 }
 
 div.container div#blog div.articles div.article div.article-body div.content {
@@ -299,7 +353,11 @@ div.container div#blog div.articles div.article div.article-body div.content p {
 
 div.container div#blog div.articles div.article div.article-body div.read-more a {
   text-decoration: none;
-  color: #1461f1;
+  color: #0b2f72;
+}
+
+div.container div#blog div.articles div.article div.article-body div.read-more a:hover {
+  text-decoration: underline;
 }
 
 div.container div#blog div.articles div.article div.article-footer {
@@ -320,6 +378,23 @@ div.container div#blog div.articles div.article div.article-footer div.content a
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 100%;
+    display: block;
+  }
+  div.container div#blog div.more-onside {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    margin-right: 0px;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.05);
+    display: none;
+  }
+  div.container div#blog div.articles {
+    margin-left: 0;
+    display: block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
 }
 
@@ -1050,7 +1125,12 @@ div#contact div.content div.message div.form-group label {
 }
 
 div.footer {
-  background-color: rgba(0, 89, 255, 0.123);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: cornflowerblue;
   padding: 2em;
+  position: relative;
+  margin-top: 100px;
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */
