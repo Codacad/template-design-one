@@ -224,7 +224,7 @@ div.container {
           box-sizing: border-box;
   clear: both;
   width: 100%;
-  background-color: rgba(0, 89, 255, 0.123);
+  background-color: #fff;
   padding: 1em;
 }
 
@@ -244,12 +244,9 @@ div.container div#blog div.articles {
 div.container div#blog div.articles div.article {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.1);
   margin: 20px 0px;
   border-radius: 3px;
-  -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
-  background-color: #f7f7f7;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 div.container div#blog div.articles div.article div.article-header {
@@ -284,9 +281,7 @@ div.container div#blog div.articles div.article div.article-header div.author-na
 
 div.container div#blog div.articles div.article div.article-body {
   display: block;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 10px 20px;
+  padding: 0px 20px 10px 20px;
 }
 
 div.container div#blog div.articles div.article div.article-body div.title h1 {
@@ -310,7 +305,8 @@ div.container div#blog div.articles div.article div.article-body div.read-more a
 div.container div#blog div.articles div.article div.article-footer {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 1em;
+  padding: .5em 1em;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 div.container div#blog div.articles div.article div.article-footer div.content a {

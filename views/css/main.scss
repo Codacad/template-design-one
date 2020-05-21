@@ -225,7 +225,8 @@ div.container{
     box-sizing:border-box;
     clear: both;
     width: 100%;
-    background-color: rgba(0, 89, 255, 0.123); 
+    // background-color: rgba(0, 89, 255, 0.123); 
+    background-color:#fff;
     padding: 1em;
 
     // Blog
@@ -238,11 +239,12 @@ div.container{
             box-sizing: border-box;
             div.article{                                
                 box-sizing: border-box;
-                border: 1px solid rgba(0,0,0,.1);            
+                // border: 1px solid rgba(0,0,0,.1);            
                 margin: 20px 0px;
                 border-radius: 3px;
-                box-shadow: 0px 0px 50px rgba(0,0,0,.1);
-                background-color: #f7f7f7;
+                // box-shadow: 0px 0px 50px rgba(0,0,0,.1);
+                // background-color: #f7f7f7;
+                border:1px solid rgba(0,0,0,.05);
                 div.article-header{
                     padding: .5em 1em;
                     div.author{
@@ -267,9 +269,9 @@ div.container{
                 }
                 div.article-body{
                     display: block;                    
-                    border-top: 1px solid rgba(0,0,0,.1);
-                    border-bottom: 1px solid rgba(0,0,0,.1);
-                    padding: 10px 20px;
+                    // border-top: 1px solid rgba(0,0,0,.1);
+                    // border-bottom: 1px solid rgba(0,0,0,.1);
+                    padding: 0px 20px 10px 20px;
                     div.title{
                         h1{
                             font-size: 120%;
@@ -291,7 +293,8 @@ div.container{
                 }
                 div.article-footer{
                     box-sizing: border-box;
-                    padding: 1em;                    
+                    padding: .5em 1em;                    
+                    border-top: 1px solid rgba(0,0,0,.05);
                     // background-color: #f7f7f7;                    
                     div.content{
                         a{
