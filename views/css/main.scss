@@ -386,6 +386,8 @@ div.container{
     }
 }
 div.container-fluid{
+    position:relative;
+    top:70px;
     div#showcase{
         background-image: url('../images/svg.svg');
         background-position: center;

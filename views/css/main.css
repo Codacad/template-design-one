@@ -398,6 +398,11 @@ div.container div#blog div.articles div.article div.article-footer div.content a
   }
 }
 
+div.container-fluid {
+  position: relative;
+  top: 70px;
+}
+
 div.container-fluid div#showcase {
   background-image: url("../images/svg.svg");
   background-position: center;
