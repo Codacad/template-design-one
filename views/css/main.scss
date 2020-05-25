@@ -234,6 +234,11 @@ nav#navbar{
         }
     }
 }
+@media (max-width:520px){
+    div.login-register{
+        display: none;
+    }
+}
 @media (max-width:780px){
     nav#navbar{
         width: 100%;
@@ -249,11 +254,14 @@ nav#navbar{
         a.hamburger{
             display: flex;                
             float: left;                       
-            padding: 0 1em;    
+            padding: 0em 1em;    
             font-size: 120%;     
-            margin-top: 2px;
+            // margin-top: 2px;
             color: rgba(255, 255, 255, 0.76);
             background-color: rgba(0,0,0,.4);
+            span{
+                margin-top: 2px;
+            }
         }
         a.brand-logo{           
             float: left;
