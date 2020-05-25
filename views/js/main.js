@@ -22,4 +22,9 @@ document.addEventListener('DOMContentLoaded', function(){
             }
         }
     }
+    const coursesSubmenu = sidenav.querySelector('a.courses');
+    const sidenavdropdown = sidenav.querySelector('li ul');
+    coursesSubmenu.addEventListener('click', function(){
+        sidenavdropdown.classList.toggle('show-submenu')
+    })
 })

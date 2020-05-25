@@ -434,20 +434,55 @@ nav#navbar div.login-register a:hover {
     border-bottom: 3px solid rgba(255, 255, 255, 0.7);
     border-left: 3px solid rgba(255, 255, 255, 0.7);
   }
+  @-webkit-keyframes dropdown {
+    0% {
+      height: 0px;
+    }
+    100% {
+      height: 285px;
+    }
+  }
+  @keyframes dropdown {
+    0% {
+      height: 0px;
+    }
+    100% {
+      height: 285px;
+    }
+  }
+  @-webkit-keyframes collapse {
+    0% {
+      height: 255px;
+    }
+    100% {
+      height: 0px;
+    }
+  }
+  @keyframes collapse {
+    0% {
+      height: 255px;
+    }
+    100% {
+      height: 0px;
+    }
+  }
   div#sidenav-wrapper div.sidenav div.nav-items ul li ul {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.1);
     height: 0;
     overflow: hidden;
-    -webkit-transition: 300ms ease-in-out;
-    transition: 300ms ease-in-out;
+    -webkit-animation: collapse 400ms ease-in-out;
+            animation: collapse 400ms ease-in-out;
   }
   div#sidenav-wrapper div.sidenav div.nav-items ul li ul.show-submenu {
-    height: auto;
-    overflow: auto;
+    height: 285px;
+    -webkit-animation: dropdown 400ms ease-in-out;
+            animation: dropdown 400ms ease-in-out;
   }
   div#sidenav-wrapper div.sidenav div.nav-items ul li:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.2);
+            box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.2);
   }
   div#sidenav-wrapper div.sidenav div.nav-items ul li:hover a {
     -webkit-transform: translateX(4px);
@@ -534,7 +569,7 @@ div.container div#blog div.articles {
 }
 
 div.container div#blog div.articles div.article {
-  background-color: rgba(0, 0, 0, 0.02);
+  background-color: rgba(255, 255, 255, 0.1);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-bottom: 5px;
