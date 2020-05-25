@@ -23,8 +23,10 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     }
     const coursesSubmenu = sidenav.querySelector('a.courses');
+    const coursesAfter = sidenav.querySelector('a.courses::after');
     const sidenavdropdown = sidenav.querySelector('li ul');
     coursesSubmenu.addEventListener('click', function(){
         sidenavdropdown.classList.toggle('show-submenu')
+        coursesSubmenu.classList.toggle('up');        
     })
 })
