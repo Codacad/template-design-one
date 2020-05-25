@@ -1302,7 +1302,7 @@ div#contact div.content div.message div.form-group label {
 div#contact div.content div.message button {
   padding: .5em 1em;
   border: none;
-  background-color: #10293d;
+  background-color: rgba(241, 59, 59, 0.849);
   cursor: pointer;
   color: rgba(255, 255, 255, 0.76);
   display: block;
@@ -1314,7 +1314,7 @@ div#contact div.content div.message button {
 }
 
 div#contact div.content div.message button:hover {
-  background-color: #031829;
+  background-color: #f13b3b;
 }
 
 @media (max-width: 780px) {
