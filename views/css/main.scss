@@ -12,6 +12,12 @@ $colorSix:rgba(0,0,0,.6);
 $colorSeven:rgba(0,0,0,.7);
 $colorEight:rgba(0,0,0,.8);
 $colorNine:rgba(0,0,0,.9);
+$backgroundOne:rgb(16, 41, 61); 
+$backgroundTwo:rgb(3, 24, 41); 
+$backgroundThree:rgba(24, 24, 56, 0.849); 
+$backgroundFour:rgb(28, 65, 95);
+$backgroundFive:rgb(12, 42, 66);
+$backgroundSix:rgb(5, 53, 92);
 *{
     padding:0;
     margin: 0;
@@ -984,75 +990,146 @@ div#contact{
     align-items: center;    
     width:100%;
     min-height:100vh;
-    background-color:rgb(15, 15, 43);
+    background-color:$backgroundFive;    
     div.content{
         box-sizing: border-box;
-        width:50%;
+        width:75%;
         margin: auto;
         border: 1px solid rgba(0,0,0,.1);
-        padding:1em;
         position: relative;
         display: flex;
-        justify-content: center;
-        border-radius: 5px;
+        justify-content: center;        
         align-items: center;
         box-shadow: 0px 0px 40px rgba(0,0,0,.1);
-        background-color: #f7f7f7;
+        background-color: rgba(255, 255, 255, .2);
+        height: 500px;
+        border-radius: 5px;
         div.contact-detail{
-            box-shadow: 0px 0px 40px rgba(0,0,0,.1);
-            position: absolute;
-            border:1px solid rgba(0,0,0,.2);
-            width: 400px;
-            left: -75%;
-            transform: translateX(80%);
-            background-color:#fff;
+            box-shadow: 0px 0px 40px rgba(0,0,0,.1);            
             box-sizing: border-box;
             padding:1em;
-            border-radius: 5px;
+            // border-radius: 5px;            
+            margin-right: auto;
+            height: 100%;
+            position: relative;        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $backgroundFour;
+            width: 50%;
             div.address, div.email, div.phone{
                 margin: 20px 0px;
                 display:flex;            
                 strong{
                     flex: 1;
-                    span.icon{
+                    color: rgba(226, 220, 220,.8);
+                    span.icon{                        
                         margin-right: 10px;
+                        color: rgba(226, 220, 220,.8);
                     }
                 }
                 .text{
                     flex: 1;
+                    color: rgba(226, 220, 220,.5);                   
+                }
+                a.text{
+                    color: cornflowerblue;
                 }
             }
         }
-        div.message{    
-            width: 400px;
-            margin-left: auto;
-            box-sizing: border-box;
-            padding: 20px;
+        div.message{                            
+            box-sizing: border-box; 
+            padding: 1em;           
+            width: 50%;          
             div.heading{
                 h1{
                     margin-bottom: 20px;
-                    color: $colorFive;
+                    color:rgba(255, 255, 255, 0.7);
                     font-size: 1.5rem;
                 }
             }
             div.form-group{
-                margin:20px 0px;
-                position: relative;
-                input.form-control{
-                    border: none;
-                    outline:none;
-                    border-bottom: 1px solid rgba(0,0,0,.5);
-                    background-color: none;
-                    padding: 5px 10px;
-                    width:100%;
-                    position: relative;
-                    z-index: 0;
+                margin:20px 0px;                
+                div{
+                    input.form-control{
+                        box-sizing: border-box;
+                        border: none;
+                        outline:none;                        
+                        background-color: none;
+                        padding: 10px 10px;
+                        width: 100%;  
+                        display: block;                                                                                
+                        font-size: 110%;
+                        background-color: rgba(0,0,0,.05);
+                        border: 2px solid rgba(255, 255, 255, 0.2);
+                        border-radius: 5px;
+                        transition: 200ms ease-in-out;
+                        color: rgba(255, 255, 255, 0.4);
+                    }
+                    input.form-control:focus{
+                        background-color: rgba(255, 255, 255, 0.05);
+                    }
                 }
-                label{
-                    position: relative;
-                    top: 20px;
-                    z-index: 1;
-                    
+                textarea{
+                    width: 100%;
+                    display: block;
+                    margin: 0;
+                    border: none;
+                    border: 2px solid rgba(255, 255, 255, 0.2);
+                    background-color: rgba(0,0,0,.05);
+                    outline: none;
+                    border-radius: 5px;
+                    color: rgba(255, 255, 255, 0.4);
+                    transition: 200ms ease-in-out;
+                    font-size:18px;
+                }
+                textarea:focus{
+                    background-color: rgba(255, 255, 255, 0.05);
+                }
+                label{                    
+                    color: rgba(255, 255, 255, 0.76);
+                }
+            }
+            button{
+                padding: .5em 1em;
+                border: none;
+                background-color:$backgroundOne;                
+                cursor: pointer;
+                color: rgba(255, 255, 255, 0.76);                
+                display: block;
+                border-radius: 5px;
+                margin-left: auto;
+                font-size: 18px;
+                transition: 200ms ease-in-out;                
+            }
+            button:hover{
+                background-color: $backgroundTwo;
+            }
+        }
+    }
+    @media (max-width:780px){
+        div.content{
+            box-sizing: border-box;
+            width:100%;
+            margin: auto;
+            border: 1px solid rgba(0,0,0,.1);
+            position: relative;
+            display: block;
+            justify-content: center;        
+            align-items: center;
+            box-shadow: 0px 0px 40px rgba(0,0,0,.1);
+            background-color: rgba(255, 255, 255, .2);
+            height:100%;
+            border-radius: 5px;            
+            div.contact-detail{
+                width: 100%;               
+            }
+            div.message{
+                width: 100%;
+                div.heading{
+                    h1{
+                        text-align: center;
+                    }
                 }
             }
         }

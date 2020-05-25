@@ -1159,16 +1159,15 @@ div#contact {
           align-items: center;
   width: 100%;
   min-height: 100vh;
-  background-color: #0f0f2b;
+  background-color: #0c2a42;
 }
 
 div#contact div.content {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 50%;
+  width: 75%;
   margin: auto;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 1em;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1176,29 +1175,36 @@ div#contact div.content {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-radius: 5px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
-  background-color: #f7f7f7;
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 500px;
+  border-radius: 5px;
 }
 
 div#contact div.content div.contact-detail {
   -webkit-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
-  position: absolute;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  width: 400px;
-  left: -75%;
-  -webkit-transform: translateX(80%);
-          transform: translateX(80%);
-  background-color: #fff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 1em;
-  border-radius: 5px;
+  margin-right: auto;
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1c415f;
+  width: 50%;
 }
 
 div#contact div.content div.contact-detail div.address, div#contact div.content div.contact-detail div.email, div#contact div.content div.contact-detail div.phone {
@@ -1212,52 +1218,135 @@ div#contact div.content div.contact-detail div.address strong, div#contact div.c
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  color: rgba(226, 220, 220, 0.8);
 }
 
 div#contact div.content div.contact-detail div.address strong span.icon, div#contact div.content div.contact-detail div.email strong span.icon, div#contact div.content div.contact-detail div.phone strong span.icon {
   margin-right: 10px;
+  color: rgba(226, 220, 220, 0.8);
 }
 
 div#contact div.content div.contact-detail div.address .text, div#contact div.content div.contact-detail div.email .text, div#contact div.content div.contact-detail div.phone .text {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  color: rgba(226, 220, 220, 0.5);
+}
+
+div#contact div.content div.contact-detail div.address a.text, div#contact div.content div.contact-detail div.email a.text, div#contact div.content div.contact-detail div.phone a.text {
+  color: cornflowerblue;
 }
 
 div#contact div.content div.message {
-  width: 400px;
-  margin-left: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 20px;
+  padding: 1em;
+  width: 50%;
 }
 
 div#contact div.content div.message div.heading h1 {
   margin-bottom: 20px;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.7);
   font-size: 1.5rem;
 }
 
 div#contact div.content div.message div.form-group {
   margin: 20px 0px;
-  position: relative;
 }
 
-div#contact div.content div.message div.form-group input.form-control {
+div#contact div.content div.message div.form-group div input.form-control {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border: none;
   outline: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   background-color: none;
-  padding: 5px 10px;
+  padding: 10px 10px;
   width: 100%;
-  position: relative;
-  z-index: 0;
+  display: block;
+  font-size: 110%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+div#contact div.content div.message div.form-group div input.form-control:focus {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+div#contact div.content div.message div.form-group textarea {
+  width: 100%;
+  display: block;
+  margin: 0;
+  border: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.05);
+  outline: none;
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.4);
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+  font-size: 18px;
+}
+
+div#contact div.content div.message div.form-group textarea:focus {
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 div#contact div.content div.message div.form-group label {
-  position: relative;
-  top: 20px;
-  z-index: 1;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+div#contact div.content div.message button {
+  padding: .5em 1em;
+  border: none;
+  background-color: #10293d;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.76);
+  display: block;
+  border-radius: 5px;
+  margin-left: auto;
+  font-size: 18px;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+div#contact div.content div.message button:hover {
+  background-color: #031829;
+}
+
+@media (max-width: 780px) {
+  div#contact div.content {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    margin: auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: block;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 100%;
+    border-radius: 5px;
+  }
+  div#contact div.content div.contact-detail {
+    width: 100%;
+  }
+  div#contact div.content div.message {
+    width: 100%;
+  }
+  div#contact div.content div.message div.heading h1 {
+    text-align: center;
+  }
 }
 
 div.footer {
