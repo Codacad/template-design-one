@@ -15,7 +15,7 @@ body {
   background-color: #fff;
 }
 
-div.sidenav {
+div.sidenav-wrapper {
   display: none;
 }
 
@@ -273,15 +273,9 @@ nav#navbar div.login-register a:hover {
     background-color: rgba(0, 0, 0, 0.4);
   }
   nav#navbar a.brand-logo {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
     float: left;
     padding: 0px 10px;
-    text-decoration: none;
     font-size: 1.2rem;
-    font-family: 'Playfair Display', serif;
-    font-weight: bold;
-    color: rgba(0, 0, 0, 0.7);
   }
   nav#navbar a.brand-logo span.cod {
     color: orange;
@@ -290,196 +284,122 @@ nav#navbar div.login-register a:hover {
     color: cornflowerblue;
   }
   nav#navbar ul {
-    list-style: none;
-    top: 55px;
-    clear: both;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.8);
     display: none;
   }
-  nav#navbar ul li a.courses {
-    position: relative;
-    margin-right: 10px;
-  }
-  nav#navbar ul li a.courses::after {
-    content: "";
-    width: 7px;
-    height: 7px;
-    display: block;
-    position: absolute;
-    top: 37%;
-    right: -14px;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.76);
-    border-right: 2px solid rgba(255, 255, 255, 0.76);
-    -webkit-transition: 200ms;
-    transition: 200ms;
-    margin-right: 10px;
-  }
-  nav#navbar ul li:hover a.courses::after {
-    content: "";
-    width: 7px;
-    height: 7px;
-    display: block;
-    position: absolute;
-    top: 47%;
-    right: -14px;
-    -webkit-transform: rotate(225deg);
-            transform: rotate(225deg);
-    border-bottom: 2px solidrgba(255, 255, 255, 0.9);
-    border-right: 2px solid rgba(255, 255, 255, 0.9);
-  }
-  nav#navbar ul li {
-    float: none;
-    position: relative;
-    display: block;
-  }
-  nav#navbar ul li a {
-    font-weight: 500;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.76);
-    padding: 13px;
-  }
-  nav#navbar ul li a:hover {
-    color: rgba(255, 255, 255, 0.9);
-    -webkit-transition: 200ms ease-in-out;
-    transition: 200ms ease-in-out;
-  }
-  nav#navbar ul li ul {
-    position: absolute;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    float: none;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 5px 0px;
-    margin: 0;
-    -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
-            box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-    -webkit-transition: 200ms ease-in-out;
-    transition: 200ms ease-in-out;
-    visibility: hidden;
-    opacity: 0;
-    border-radius: 5px;
-    background-color: #10293d;
-    width: 150px;
-  }
-  nav#navbar ul li ul li {
-    float: none;
-  }
-  nav#navbar ul li ul li a {
-    line-height: 0;
-    padding: 20px;
-    display: block;
-    color: rgba(255, 255, 255, 0.7);
-    -webkit-transition: 200ms;
-    transition: 200ms;
-  }
-  nav#navbar ul li ul li a:hover {
-    background-color: rgba(0, 0, 0, 0.04);
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 110%;
-    -webkit-transition: 200ms;
-    transition: 200ms;
-  }
-  nav#navbar ul li ul li:hover::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 5px;
-    background-color: cornflowerblue;
-    top: 0;
-    display: none;
-  }
-  nav#navbar ul li::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 5px;
-    background-color: rgba(0, 0, 0, 0.6);
-    bottom: 0;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    -webkit-transition: 300ms ease-in-out;
-    transition: 300ms ease-in-out;
-    display: block;
-  }
-  nav#navbar ul li:hover::after {
-    display: none;
-  }
-  nav#navbar ul li:hover ul {
-    -webkit-transition: 200ms ease-in-out;
-    transition: 200ms ease-in-out;
+  div#sidenav-wrapper.toggle-sidenav-wrapper {
     visibility: visible;
     opacity: 1;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
   }
-  nav#navbar div.login-register {
-    float: right;
-    margin-right: 10px;
+  div#sidenav-wrapper {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    -webkit-transition: 400ms;
+    transition: 400ms;
+    visibility: hidden;
+    opacity: 0;
   }
-  nav#navbar div.login-register a {
-    padding: 5px 10px;
-    margin-left: 5px;
-    text-decoration: none;
-    border-radius: 3px;
-    color: rgba(0, 0, 0, 0.5);
-    -webkit-transition: 200ms ease-in-out;
-    transition: 200ms ease-in-out;
-    color: rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    color: #fff;
-    background-color: #1c415f;
-  }
-  nav#navbar div.login-register a span {
-    margin-right: 5px;
-  }
-  nav#navbar div.login-register a:hover {
-    background-color: rgba(28, 65, 95, 0.801);
-  }
-  div.sidenav::-webkit-scrollbar {
+  div#sidenav-wrapper div.sidenav::-webkit-scrollbar {
     width: 10px;
     background-color: #10293d;
     -webkit-box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.5);
             box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.5);
   }
-  div.sidenav::-webkit-scrollbar-thumb {
+  div#sidenav-wrapper div.sidenav::-webkit-scrollbar-thumb {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
   }
-  div.sidenav {
+  div#sidenav-wrapper div.sidenav.toggle-sidenav {
+    left: 0;
+  }
+  div#sidenav-wrapper div.sidenav {
     display: block;
     position: fixed;
     width: 300px;
     height: 100%;
-    top: 55px;
-    left: 0;
+    top: 0;
+    left: -300px;
     background-color: #10293d;
-    z-index: 100;
+    z-index: 101;
     overflow-y: scroll;
+    -webkit-transition: 300ms ease-in-out;
+    transition: 300ms ease-in-out;
   }
-  div.sidenav div.nav-items {
+  div#sidenav-wrapper div.sidenav a.close {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 40px;
+    height: 40px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.2rem;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 1em;
+    border-radius: 50%;
+    -webkit-transition: 200ms ease-in-out;
+    transition: 200ms ease-in-out;
+  }
+  div#sidenav-wrapper div.sidenav a.close:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  div#sidenav-wrapper div.sidenav div.nav-items {
     display: block;
   }
-  div.sidenav div.nav-items div.login-register {
-    display: block;
+  div#sidenav-wrapper div.sidenav div.nav-items div.login-register {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 80%;
+    margin: 70px auto 20px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
-  div.sidenav div.nav-items ul {
+  div#sidenav-wrapper div.sidenav div.nav-items div.login-register a {
+    text-decoration: none;
+    display: block;
+    padding: .5em 1em;
+    width: 50%;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 5px;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0px 0px 3px #fff;
+            box-shadow: inset 0px 0px 3px #fff;
+    -webkit-transition: 200ms ease-in-out;
+    transition: 200ms ease-in-out;
+  }
+  div#sidenav-wrapper div.sidenav div.nav-items div.login-register a:hover {
+    background-color: rgba(226, 220, 220, 0.3);
+  }
+  div#sidenav-wrapper div.sidenav div.nav-items ul {
     list-style: none;
     text-align: left;
     width: 100%;
   }
-  div.sidenav div.nav-items ul li {
+  div#sidenav-wrapper div.sidenav div.nav-items ul li {
+    -webkit-transition: 200ms ease-in-out;
+    transition: 200ms ease-in-out;
     display: block;
   }
-  div.sidenav div.nav-items ul li a {
+  div#sidenav-wrapper div.sidenav div.nav-items ul li a {
     display: block;
     position: relative;
     -webkit-box-sizing: border-box;
@@ -488,11 +408,10 @@ nav#navbar div.login-register a:hover {
     text-decoration: none;
     color: rgba(226, 220, 220, 0.8);
     width: 100%;
+    -webkit-transition: 200ms ease-in-out;
+    transition: 200ms ease-in-out;
   }
-  div.sidenav div.nav-items ul li a:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-  div.sidenav div.nav-items ul li a.courses::after {
+  div#sidenav-wrapper div.sidenav div.nav-items ul li a.courses::after {
     content: "";
     display: block;
     position: absolute;
@@ -507,16 +426,30 @@ nav#navbar div.login-register a:hover {
     border-bottom: 3px solid rgba(255, 255, 255, 0.7);
     border-left: 3px solid rgba(255, 255, 255, 0.7);
   }
-  div.sidenav div.nav-items ul li ul {
+  div#sidenav-wrapper div.sidenav div.nav-items ul li ul {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.1);
     height: 0;
     overflow: hidden;
+    -webkit-transition: 300ms ease-in-out;
+    transition: 300ms ease-in-out;
+  }
+  div#sidenav-wrapper div.sidenav div.nav-items ul li ul.show-submenu {
+    height: auto;
+    overflow: auto;
+  }
+  div#sidenav-wrapper div.sidenav div.nav-items ul li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  div#sidenav-wrapper div.sidenav div.nav-items ul li:hover a {
+    -webkit-transform: translateX(4px);
+            transform: translateX(4px);
   }
 }
 
 div.container {
   position: relative;
+  top: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   clear: both;

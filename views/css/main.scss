@@ -26,7 +26,7 @@ body{
 }
 
 // Navbar
-div.sidenav{
+div.sidenav-wrapper{
     display: none;
 }
 nav#navbar{
@@ -255,15 +255,10 @@ nav#navbar{
             color: rgba(255, 255, 255, 0.76);
             background-color: rgba(0,0,0,.4);
         }
-        a.brand-logo{
-            box-sizing: border-box;
+        a.brand-logo{           
             float: left;
             padding: 0px 10px;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-family: 'Playfair Display', serif;
-            font-weight: bold;
-            color:$colorSeven;
+            font-size: 1.2rem;            
             span.cod{
                 color: orange;
             }
@@ -272,219 +267,144 @@ nav#navbar{
             }
         }
         ul{
-            list-style: none;            
-            top: 55px;        
-            clear: both; 
-            text-align: center; 
-            background-color: rgba(0,0,0,.8);  
-            display: none;
-            li a.courses{
-                position: relative;
-                margin-right:10px;
-            }
-            li a.courses::after{
-                content: "";
-                width: 7px;
-                height: 7px;
-                display: block;
-                position: absolute;
-                top: 37%;
-                right: -14px;
-                transform: rotate(45deg);
-                border-bottom: 2px solid rgba(255, 255, 255, 0.76);
-                border-right: 2px solid rgba(255, 255, 255, 0.76);
-                transition: 200ms;
-                margin-right:10px;    
-            }
-            li:hover a.courses::after{
-                content: "";
-                width: 7px;
-                height: 7px;
-                display: block;
-                position: absolute;
-                top: 47%;
-                right: -14px;
-                transform: rotate(225deg);
-                border-bottom: 2px solidrgba(255, 255, 255, 0.9);
-                border-right: 2px solid rgba(255, 255, 255, 0.9);
-            }
-            li{
-                float:none;
-                position: relative;
-                display: block;
-                a{                
-                    font-weight:500;
-                    box-sizing: border-box;
-                    text-decoration: none;
-                    color:rgba(255, 255, 255, 0.76);
-                    padding: 13px;
-                    
-                }
-                a:hover{                
-                    color: rgba(255, 255, 255, 0.9);
-                    transition: 200ms ease-in-out;   
-                }
-                ul{
-                    position: absolute;
-                    box-sizing: border-box;
-                    float: none;    
-                    border: 1px solid $colorOne;
-                    padding: 5px 0px;
-                    margin: 0;
-                    box-shadow: 0px 3px 3px rgba(0,0,0,.2);
-                    transform: translateY(-20px);
-                    transition: 200ms ease-in-out;
-                    visibility: hidden;
-                    opacity: 0;
-                    border-radius: 5px;
-                    // background-color: #f7f7f7;
-                    // background-color:rgb(16, 41, 61); 
-                    background-color:rgb(16, 41, 61);             
-                    // rgba(0, 89, 255, 1)
-                    width: 150px;
-                    li{
-                        float: none;
-                        a{
-                            line-height: 0;
-                            padding: 20px;
-                            display: block;
-                            color: rgba(255, 255, 255, 0.7);
-                            transition: 200ms;
-                        }
-                        a:hover{
-                            background-color: rgba(0,0,0,.04);
-                            color: rgba(255, 255, 255, 0.9);
-                            font-size: 110%;
-                            transition: 200ms;
-                        }
-                        
-                    }
-                    li:hover::after{
-                        content:"";
-                        position: absolute;
-                        width: 100%;
-                        height: 5px;
-                        background-color: cornflowerblue;
-                        top: 0;
-                        display: none;
-                    }
-                }
-             
-            }
-            
-            li::after{
-                content:"";
-                position: absolute;
-                width: 0;
-                height: 5px;
-                background-color: $colorSix;
-                bottom: 0;
-                left: 50%;
-                transform: translateX(-50%);
-                transition: 300ms ease-in-out;
-                display: block;
-            }
-            li:hover::after{
-               
-                display: none;
-              
-            }
-            
-            li:hover ul{
-                transition: 200ms ease-in-out;
-                visibility: visible;
-                opacity: 1;
-                transform: translateY(0px);
-            }
-        }
-        div.login-register{
-            float: right;
-            margin-right: 10px;
-            a{
-                padding: 5px 10px;
-                margin-left: 5px;
-                text-decoration: none;
-                border-radius: 3px;
-                color: $colorFive;            
-                transition: 200ms ease-in-out;
-                color: $colorFive;
-                border: 1px solid $colorFive;
-                color: #fff;
-              background-color:rgb(28, 65, 95);
-                span{
-                    margin-right: 5px;;
-                }
-            }
-            a:hover{
-                background-color:rgba(28, 65, 95, 0.801);
-            }
+            display: none;           
         }
     }
-    div.sidenav::-webkit-scrollbar{
-        width: 10px;
-        background-color:rgb(16, 41, 61);
-        box-shadow: inset 0px 0px 20px rgba(0,0,0,.5);
-        
+    div#sidenav-wrapper.toggle-sidenav-wrapper{
+        visibility: visible;
+        opacity: 1;
     }
-    div.sidenav::-webkit-scrollbar-thumb{
-        width: 100%;
-        background-color:rgba(255, 255, 255, 0.7);
-        border-radius: 10px;
-    }
-    div.sidenav{
+    div#sidenav-wrapper{
         display: block;
         position: fixed;
-        width: 300px;
-        height: 100%;
-        top: 55px;
+        top: 0;
         left: 0;
-        background-color:rgb(16, 41, 61);
-        z-index: 100;
-        overflow-y: scroll;  
-        div.nav-items{
-            div.login-register{
-                display: block;
+        width: 100%;        
+        height:100%;
+        background-color: rgba(0,0,0,.5);
+        z-index:100;
+        transition: 400ms;
+        visibility: hidden;
+        opacity: 0;
+        div.sidenav::-webkit-scrollbar{
+            width: 10px;
+            background-color:rgb(16, 41, 61);
+            box-shadow: inset 0px 0px 20px rgba(0,0,0,.5);
+            
+        }
+        div.sidenav::-webkit-scrollbar-thumb{
+            width: 100%;
+            background-color:rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+        }
+        div.sidenav.toggle-sidenav{
+            left: 0;
+        }
+        div.sidenav{
+            display: block;
+            position: fixed;
+            width: 300px;
+            height: 100%;
+            top: 0;
+            left: -300px;
+            background-color:rgb(16, 41, 61);
+            z-index: 101;
+            overflow-y: scroll;  
+            transition:300ms ease-in-out;            
+            a.close{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40px;
+                height: 40px;
+                box-sizing: border-box;
+                text-decoration: none;
+                color: rgba(255, 255, 255, 0.7);
+                font-size: 1.2rem;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                padding: 1em;
+                border-radius: 50%;
+                transition: 200ms ease-in-out;
             }
-            display: block;                              
-            ul{
-                list-style: none;
-                text-align: left;   
-                width: 100%;                        
-                
-                li{
-
-                    display: block;                    
+            a.close:hover{
+                background-color: rgba(255, 255, 255, 0.2);                                   
+            }
+            div.nav-items{                            
+                div.login-register{
+                    box-sizing: border-box;
+                    width: 80%;
+                    margin: 70px auto 20px auto;
+                    display: flex;
                     a{
-                        display: block;
-                        position: relative;
-                        box-sizing: border-box;
-                        padding: 1em;
                         text-decoration: none;
-                        color: rgba(226, 220, 220,.8);        
-                        width:100%
+                        display: block;
+                        padding:.5em 1em;
+                        width: 50%;
+                        text-align: center;
+                        color: #fff;
+                        background-color: rgba(255, 255, 255, 0.2);
+                        margin: 5px;
+                        border-radius: 3px;
+                        box-shadow: inset 0px 0px 3px #fff;
+                        transition: 200ms ease-in-out;
+    
                     }
                     a:hover{
+                        background-color: rgba(226, 220, 220,.3);
+                    }
+                }
+                display: block;                              
+                ul{
+                    list-style: none;
+                    text-align: left;   
+                    width: 100%;                        
+                    
+                    li{
+                        transition: 200ms ease-in-out;
+                        display: block;                                        
+                        a{
+                            display: block;
+                            position: relative;
+                            box-sizing: border-box;
+                            padding: 1em;
+                            text-decoration: none;
+                            color: rgba(226, 220, 220,.8);        
+                            width:100%;
+                            transition:200ms ease-in-out;
+                        }
+                        a.courses::after{
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            right: 20px;
+                            top: 40%;
+                            width: 10px;
+                            transform: translateY(-50%);
+                            transform: rotate(-45deg);
+                            height: 10px;
+                            // background-color:rgb(16, 41, 61);
+                            border-bottom: 3px solid rgba(255, 255, 255, 0.7);
+                            border-left: 3px solid rgba(255, 255, 255, 0.7);
+                        }                
+                        ul{
+                            text-align:center;
+                            background-color: $colorOne;
+                            height: 0;
+                            overflow: hidden;
+                            transition: 300ms ease-in-out;
+                        }
+                        ul.show-submenu{
+                            height: auto;
+                            overflow: auto;
+                        }
+                    }
+                    li:hover{
                         background-color: $colorOne;
                     }
-                    a.courses::after{
-                        content: "";
-                        display: block;
-                        position: absolute;
-                        right: 20px;
-                        top: 40%;
-                        width: 10px;
-                        transform: translateY(-50%);
-                        transform: rotate(-45deg);
-                        height: 10px;
-                        // background-color:rgb(16, 41, 61);
-                        border-bottom: 3px solid rgba(255, 255, 255, 0.7);
-                        border-left: 3px solid rgba(255, 255, 255, 0.7);
-                    }                
-                    ul{
-                        text-align:center;
-                        background-color: $colorOne;
-                        height: 0;
-                        overflow: hidden;
+                    li:hover a{
+                        transform: translateX(4px);
                     }
                 }
             }
@@ -494,6 +414,7 @@ nav#navbar{
 // containers
 div.container{
     position: relative;
+    top: 0;
     box-sizing:border-box;
     clear: both;
     width: 100%; 
