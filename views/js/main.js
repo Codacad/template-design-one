@@ -31,11 +31,25 @@ document.addEventListener('DOMContentLoaded', function(){
     })
     
 })
-
-window.addEventListener('load', () => {
     const underDev = document.querySelector('div.under-development-inform');
     const label = document.querySelector('div.under-development-inform div.label');
     const closeLabel = document.querySelector('div.under-development-inform div.label div.contents a');          
-    underDev.classList.add('show-development-inform')
+    
+    window.addEventListener('load', (e) => {
+    const underDev = document.querySelector('div.under-development-inform');
+    const label = document.querySelector('div.under-development-inform div.label');
+    const closeLabel = document.querySelector('div.under-development-inform div.label div.contents a');          
+    underDev.classList.add('show-under-development')
     label.classList.add('show-label')
+    
+    closeLabel.addEventListener('click', () => {
+        underDev.classList.remove('show-under-development')
+        label.classList.remove('show-label')
+    })    
+    window.onclick = (e) => {
+        if(e.target.id == 'under-development'){
+            underDev.classList.remove('show-under-development')
+            label.classList.remove('show-label')
+        }
+    }
 })
