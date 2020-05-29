@@ -2,20 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <nav id="navbar" 
-        <% if (typeof title != "undefined") { %>
-            class="<%- title == "Resume" ? "no-shadow" : ""%>"
-        <% } %>
-    >
+    <nav id="navbar" <% if (typeof title != "undefined"){ %>class=<%- title == "Resume" ? "no-shadow" : ""%><% } %>>    
         <a href="#" class="hamburger"><span><i class="fas fa-bars"></i></span></a>
         <a href="/" class="brand-logo"><span class="cod">{_Cod</span><span class="acad">Acad_}</span></a>
         <ul>
-            <li><a href="/">Home</a></li>
-            <li>
-                <a class="courses" href="#courses">Courses</a>
+            <li <% if (typeof title != "undefined"){ %>class=<%- title == "CodAcad" ? "active" : ""%><% } %>><a href="/">Home</a></li>
+            <li <% if (typeof title != "undefined"){ %>class=<%- title == "Courses" ? "active" : ""%><% } %>><a class="courses" href="#courses">Courses</a>
                 <ul>
                     <li><a href="#">HTML</a></li>
                     <li><a href="#">CSS</a></li>
@@ -24,15 +19,14 @@
                     <li><a href="#">ExpressJS</a></li>
                 </ul>
             </li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/resume">Resume</a></li>
+            <li <% if (typeof title != "undefined"){ %>class=<%- title == "Blog" ? "active" : ""%><% } %>><a href="/blog">Blog</a></li>
+            <li <% if (typeof title != "undefined"){ %>class=<%- title == "Resume" ? "active" : ""%><% } %>><a href="/resume">Resume</a></li>
             
         </ul>
         <div class="login-register">            
             <a href="#" class="signup">Register</a>
             <a href="#" class="login"><span><i class="fas fa-sign-in-alt"></i></span> Login</a>
         </div>
-    </nav>
-    
+    </nav>        
 </body>
 </html>

@@ -33,7 +33,6 @@ nav#navbar {
   left: 0;
   z-index: 10;
   line-height: 55px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
   background-color: #10293d;
@@ -175,13 +174,28 @@ nav#navbar ul li ul li:hover::after {
   display: none;
 }
 
+nav#navbar ul li.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  bottom: 0px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  display: block;
+}
+
 nav#navbar ul li::after {
   content: "";
   position: absolute;
   width: 0;
-  height: 3px;
+  height: 5px;
   background-color: rgba(0, 0, 0, 0.6);
-  bottom: -2px;
+  bottom: 0px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);

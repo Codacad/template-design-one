@@ -5,20 +5,20 @@ const Comments = require('../models/comments')
 const Replies = require('../models/replies')
 
 Router.get('/', (req, res) => {
-    res.render('index');
+    res.render('index', {title:"CodAcad"});
 })
 Router.get('/blog', (req, res) => {
-    res.render('blog');
+    res.render('blog',{title:"Blog"});
 })
 Router.get('/courses',(req, res) => {
-    res.render('courses');
+    res.render('courses', {title:"Courses"});
 })
 Router.get('/contact',(req, res) => {
-    res.render('contact');
+    res.render('contact', {title:"Contact"});
 })
 
 Router.get('/about',(req, res) => {
-    res.render('about');
+    res.render('about', {title:'About'});
 })
 Router.get('/resume',(req, res) => {
     res.render('resume', {title:"Resume"});
