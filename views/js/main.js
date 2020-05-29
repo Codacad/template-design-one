@@ -29,12 +29,13 @@ document.addEventListener('DOMContentLoaded', function(){
         sidenavdropdown.classList.toggle('show-submenu')
         coursesSubmenu.classList.toggle('up');        
     })
-
-    const underDev = document.querySelector('div.under-development-inform');
-    const label = document.querySelector('div.under-development-inform div.label');
-    const closeLabel = document.querySelector('div.under-development-inform div.label div.contents a');          
+    
 })
 
 window.addEventListener('load', () => {
-    alert('Hello');
+    const underDev = document.querySelector('div.under-development-inform');
+    const label = document.querySelector('div.under-development-inform div.label');
+    const closeLabel = document.querySelector('div.under-development-inform div.label div.contents a');          
+    underDev.classList.add('show-development-inform')
+    label.classList.add('show-label')
 })
