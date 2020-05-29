@@ -19,6 +19,12 @@ div.sidenav-wrapper {
   display: none;
 }
 
+nav#navbar.no-shadow {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-bottom: none;
+}
+
 nav#navbar {
   width: 100%;
   height: 55px;
@@ -173,9 +179,9 @@ nav#navbar ul li::after {
   content: "";
   position: absolute;
   width: 0;
-  height: 5px;
+  height: 3px;
   background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0;
+  bottom: -2px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -194,7 +200,6 @@ nav#navbar ul li:hover::after {
   left: 0;
   -webkit-transform: translateX(0);
           transform: translateX(0);
-  bottom: 0;
 }
 
 nav#navbar ul li:nth-child(2):hover::after {
@@ -686,6 +691,177 @@ div.container div#blog div.articles div.article div.article-footer div.content a
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
+}
+
+div.resume-container {
+  padding: 0;
+  margin: 0;
+}
+
+div.resume-container div#resume {
+  position: relative;
+  top: 55px;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0c2a42;
+}
+
+div.resume-container div#resume div.resume-contents div.header div.social-profiles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(241, 59, 59, 0.3);
+  height: 50px;
+}
+
+div.resume-container div#resume div.resume-contents div.header div.social-profiles div.profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div.resume-container div#resume div.resume-contents div.header div.social-profiles div.profile a {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px 10px;
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.9);
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+  background-color: rgba(241, 59, 59, 0.3);
+  font-size: 1.5rem;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+div.resume-container div#resume div.resume-contents div.header div.social-profiles div.profile a:hover {
+  background-color: rgba(241, 59, 59, 0.8);
+}
+
+div.resume-container div#resume div.resume-contents div.header div.header-detail {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 500px;
+}
+
+div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 9fr;
+      grid-template-columns: 3fr 9fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-image {
+  width: 200px;
+  height: 200px;
+  background-image: url("../images/Photo_2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+  border-radius: 10px;
+  opacity: .7;
+}
+
+div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective div.name h3 {
+  color: rgba(241, 59, 59, 0.8);
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  line-height: .8em;
+}
+
+div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective div.name span {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective div.objective {
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.4em;
+}
+
+div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective div.contact-detail {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+}
+
+div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective div.contact-detail div:last-child {
+  border-right: none;
+}
+
+div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective div.contact-detail div {
+  margin-right: 10px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-right: 10px;
+}
+
+div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective div.contact-detail div strong {
+  color: #fff;
+}
+
+div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective div.contact-detail div strong span {
+  color: rgba(241, 59, 59, 0.8);
+  margin-right: 5px;
+}
+
+div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective div.contact-detail div span {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective div.contact-detail div a {
+  color: cornflowerblue;
+}
+
+div.resume-container div#resume div.resume-contents div.body {
+  position: relative;
+  width: 75%;
+  margin: auto;
+  background-color: #0c2a42;
+  top: -200px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.04);
+          box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.04);
+  padding: 1em;
 }
 
 div.container-fluid {
@@ -1248,6 +1424,7 @@ div#contact div.content div.message div.heading h1 {
   margin-bottom: 20px;
   color: rgba(255, 255, 255, 0.7);
   font-size: 1.5rem;
+  text-align: center;
 }
 
 div#contact div.content div.message div.form-group {

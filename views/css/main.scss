@@ -35,6 +35,10 @@ body{
 div.sidenav-wrapper{
     display: none;
 }
+nav#navbar.no-shadow{
+    box-shadow: none;        
+    border-bottom: none;
+}
 nav#navbar{
     width: 100%;
     height: 55px;
@@ -179,9 +183,9 @@ nav#navbar{
             content:"";
             position: absolute;
             width: 0;
-            height: 5px;
+            height: 3px;
             background-color: $colorSix;
-            bottom: 0;
+            bottom: -2px;
             left: 50%;
             transform: translateX(-50%);
             transition: 300ms ease-in-out;
@@ -195,8 +199,7 @@ nav#navbar{
             background-color: rgba(255, 255, 255, 0.7);
             display: block;            
             left: 0;
-            transform: translateX(0);
-            bottom: 0;
+            transform: translateX(0);            
         }
         li:nth-child(2):hover::after{
             content:"";
@@ -608,7 +611,7 @@ div.container{
                 }
             }
         }
-    }
+    }    
     @media (max-width:780px){
       
         div#blog{
@@ -633,7 +636,134 @@ div.container{
         }
     }
 }
-
+div.resume-container{
+    padding: 0;
+    margin: 0;
+    div#resume{
+        position: relative;
+        top: 55px;
+        width: 100%;
+        min-height: 100vh;
+        background-color: $backgroundFive;
+        div.resume-contents{
+            div.header{
+                div.social-profiles{
+                    display: flex;
+                    box-sizing: border-box;
+                    justify-content: center;
+                    align-items: center;
+                    // background-color: rgba(0,0,0,.1);
+                    background-color:rgba(241, 59, 59, 0.3);
+                    // background-color: rgba(241, 59, 59, 0.5);
+                    height: 50px;
+                    div.profile{
+                        display: flex;
+                        a{
+                            position: relative;
+                            width: 40px;
+                            height: 40px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;                          
+                            margin: 0px 10px;
+                            border-radius: 50%;
+                            color: rgba(255, 255, 255, 0.9);
+                            transition: 200ms ease-in-out;
+                            background-color: rgba(241, 59, 59, 0.3);
+                            font-size: 1.5rem;
+                            box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+                        } 
+                        a:hover{
+                            // background-color: rgba(0,0,0,.2);
+                            background-color: rgba(241, 59, 59, 0.8);
+                        }                                                                 
+                    }
+                }
+                div.header-detail{
+                    display: block;                    
+                    box-sizing: border-box;
+                    padding: 1em;          
+                    align-items: center;      
+                    background-color: rgba(255, 255, 255, 0.1);
+                    height: 500px;
+                    div.profile-and-objective{
+                        display: grid;
+                        grid-template-columns: 3fr 9fr;
+                        justify-content: center;
+                        align-items: center;
+                        div.profile-image{
+                            width: 200px;
+                            height: 200px;
+                            background-image: url('../images/Photo_2.jpg');
+                            // background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            margin: auto;
+                            border-radius: 10px;
+                            opacity: .7;
+                        }
+                        div.profile-name-and-objective{                                                        
+                            box-sizing: border-box;
+                            div.name{
+                                h3{
+                                    color: rgba(241, 59, 59, .8);
+                                    font-size: 1.8rem;
+                                    letter-spacing:2px;
+                                    line-height: .8em;
+                                }
+                                span{
+                                    color: rgba(255, 255, 255, 0.3);
+                                }
+                            }
+                            div.objective{
+                                margin-top: 10px;
+                                color:rgba(255, 255, 255, 0.7);
+                                line-height: 1.4em;
+                            }
+                            div.contact-detail{
+                                box-sizing: border-box;
+                                display: flex;                                                                
+                                margin-top: 10px;
+                                div:last-child{
+                                    border-right: none;
+                                }
+                                div{
+                                    margin-right: 10px; 
+                                    border-right: 1px solid rgba(255, 255, 255, 0.2);
+                                    box-sizing: border-box;
+                                    padding-right: 10px;
+                                    strong{
+                                        color: #fff;
+                                        span{
+                                            color:rgba(241, 59, 59, .8);
+                                            margin-right: 5px;
+                                        }
+                                    }
+                                    span{
+                                        color: rgba(255,255,255,.3);
+                                    }
+                                    a{
+                                        color:cornflowerblue;
+                                    }
+                                }                                
+                            }                            
+                        }
+                    }                    
+                }
+            }
+            div.body{
+                position:relative;
+                width: 75%;
+                margin: auto;
+                background-color:$backgroundFive;
+                top: -200px;
+                border-radius:5px;
+                box-shadow: 0px 0px 50px rgba(255,255,255,.04);
+                padding: 1em;
+            }            
+        }
+    }    
+}
 div.container-fluid{
     position:relative;
     top:55px;
@@ -1046,6 +1176,7 @@ div#contact{
                     margin-bottom: 20px;
                     color:rgba(255, 255, 255, 0.7);
                     font-size: 1.5rem;
+                    text-align:center;
                 }
             }
             div.form-group{
