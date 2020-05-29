@@ -972,6 +972,29 @@ div.container-fluid div.under-development-inform div.label.show-label {
   top: 50%;
 }
 
+@media (max-width: 520px) {
+  div.container-fluid div.under-development-inform div.under-development-inform {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 1em;
+  }
+  div.container-fluid div.under-development-inform div.under-development-inform div.label {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background-color: #0c2a42;
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+    -webkit-transition: 500ms ease-in-out;
+    transition: 500ms ease-in-out;
+  }
+}
+
 div.container-fluid div.under-development-inform.show-under-development {
   visibility: visible;
   opacity: 1;
