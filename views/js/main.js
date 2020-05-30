@@ -42,14 +42,23 @@ document.addEventListener('DOMContentLoaded', function(){
     underDev.classList.add('show-under-development')
     label.classList.add('show-label')
     
-    closeLabel.addEventListener('click', () => {
+    closeLabel.addEventListener('click', (e) => {
+        e.preventDefault()
         underDev.classList.remove('show-under-development')
         label.classList.remove('show-label')
     })    
-    window.onclick = (e) => {
+    window.onclick = (e) => {        
         if(e.target.id == 'under-development'){
             underDev.classList.remove('show-under-development')
             label.classList.remove('show-label')
         }
     }
+
+    // const allAnchor = document.querySelectorAll('a');
+    // allAnchor.forEach(anchor => {
+    //     const href = anchor.getAttribute("href");
+    //     if(href == "#"){
+            
+    //     }
+    // })
 })

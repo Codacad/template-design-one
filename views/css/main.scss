@@ -108,10 +108,11 @@ nav#navbar{
                 font-weight:500;
                 box-sizing: border-box;
                 text-decoration: none;
-                color:rgba(255, 255, 255, 0.76);
+                color: rgba(255, 255, 255, 0.7);                
                 padding: 13px;
+                transition: 300ms ease-in-out;
                 
-            }
+            }            
             a:hover{                
                 color: rgba(255, 255, 255, 0.9);
                 transition: 200ms ease-in-out;   
@@ -176,13 +177,13 @@ nav#navbar{
             //     border-left: 1px solid $colorOne;
             //     border-top: 1px solid $colorOne;
             // }
-        }
+        }        
         li.active::after{
             content:"";
             position: absolute;
             width: 100%;
             height: 5px;
-            background-color:rgba(255, 255, 255, 0.7);
+            background-color: rgba(255, 255, 255, 0.7);
             bottom: 0px;
             left: 50%;
             transform: translateX(-50%);
@@ -200,13 +201,13 @@ nav#navbar{
             transform: translateX(-50%);
             transition: 300ms ease-in-out;
             display: block;
-        }        
+        }            
         li:hover::after{
             content:"";
             position: absolute;
             width: 100%;
             height: 5px;
-            background-color: rgba(255, 255, 255, 0.7);
+            background-color:rgba(255, 255, 255, 0.9);            
             display: block;            
             left: 0;
             transform: translateX(0);            
@@ -243,13 +244,16 @@ nav#navbar{
             color: $colorFive;
             border: 1px solid $colorFive;
             color: #fff;
-          background-color:rgb(28, 65, 95);
+            // background-color:rgb(28, 65, 95);
+            background-color:rgba(241, 59, 59, .8);
+            transition: 300ms ease-in-out;
             span{
                 margin-right: 5px;;
             }
         }
         a:hover{
-            background-color:rgba(28, 65, 95, 0.801);
+            // background-color:rgba(28, 65, 95, 0.801);
+            background-color:rgba(241, 59, 59, .9);
         }
     }
 }
@@ -498,10 +502,12 @@ div.container{
             width: 350px;
             background-color:rgba(0,0,0,.05);
             div.mores{
+                background-color: rgba(241, 59, 59, 0.4);
                 div.heading{
                     text-align: center;
                     padding-top: 10px;
                     color: rgba(228, 225, 225, 0.5);
+                    
                 }
                 div.more{
                     padding: 10px;
