@@ -663,6 +663,8 @@ div.resume-container{
         background-color: $backgroundFive;
         div.resume-contents{
             div.header{
+                position: relative;
+                margin: 0;
                 div.social-profiles{
                     display: flex;
                     box-sizing: border-box;
@@ -701,7 +703,7 @@ div.resume-container{
                     padding: 1em;          
                     align-items: center;      
                     background-color: rgba(255, 255, 255, 0.1);
-                    height: 500px;
+                    // height: 500px;
                     div.profile-and-objective{
                         display: grid;
                         grid-template-columns: 3fr 9fr;
@@ -766,17 +768,16 @@ div.resume-container{
                         }
                     }                    
                 }
-            }
+            } 
             div.body{
-                position:relative;
-                width: 75%;
-                margin: auto;
-                background-color:$backgroundFive;
-                top: -200px;
-                border-radius:5px;
-                box-shadow: 0px 0px 50px rgba(255,255,255,.04);
-                padding: 1em;
-            }            
+                display: grid;
+                grid-template-columns: 3fr 9fr;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(255, 255, 255, 0.1);
+                box-sizing: border-box;
+                padding: 1em; 
+            }           
         }
     }    
 }
