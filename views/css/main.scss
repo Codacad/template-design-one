@@ -735,7 +735,7 @@ div.resume-container{
                             box-sizing: border-box;
                             div.name{
                                 h3{
-                                    color: #333333;
+                                    color: #fff;
                                     font-size: 1.8rem;
                                     letter-spacing:2px;
                                     line-height: .8em;
@@ -749,8 +749,8 @@ div.resume-container{
                                 color:rgba(255,255, 255, .8);
                                 line-height: 1.4em;
                                 padding-left: 1em;
-                                border-left: 2px solid rgba(0,0,0,.2);
-                                box-shadow: inset 2px 0px 0px rgba(0,0,0,.1);
+                                border-left: 2px solid rgba(0,0,0,.1);
+                                box-shadow: inset 1px 0px 0px rgba(0,0,0,.1);
                                 margin-top: 10px;
                                 font-size: 18px;
                                 margin-left: 5px;
@@ -770,16 +770,16 @@ div.resume-container{
                                     strong{
                                         color: #fff;
                                         span{
-                                            color: #333333;;
+                                            color: rgba(255, 255, 255, 0.5);
                                             margin-right: 5px;
-                                            box-shadow: 0px 0px 10px rgba(0,0,0,.1);
+                                            text-shadow: 0px 0px 10px rgba(0,0,0,.5);
                                         }
                                     }
                                     span{
                                         color: rgba(255,255,255,.5);
                                     }
                                     a{
-                                        color:cornflowerblue;
+                                        color:rgba(255, 255, 255, 0.5);
                                     }
                                 }                                
                             }                            
@@ -802,7 +802,7 @@ div.resume-container{
                                 margin-top: 20px;
                                 div.name{
                                     h3{
-                                        columns: #333333;
+                                        columns: #fff;
                                         font-size: 1.6rem;
                                     }
                                     span{
@@ -832,7 +832,7 @@ div.resume-container{
                                             color: #fff;
                                             margin-right: 10px;                                            
                                             span{
-                                                color: #333333;;
+                                                color: rgba(255, 255, 255, 0.5);
                                                 margin-right: 5px;
                                                 box-shadow: 0px 0px 10px rgba(0,0,0,.1);
                                             }
@@ -842,7 +842,7 @@ div.resume-container{
                                             font-size: 16px;
                                         }
                                         a{
-                                            color:rgba(255,255,255,.6);
+                                            color: rgba(255, 255, 255, 0.5);
                                             font-size: 16px;
                                         }
                                     }                                
@@ -973,11 +973,11 @@ div.resume-container{
                             background-color: rgba(0,0,0,.1);                     
                         }
                         div.skills-and-tools{
-                            display: block;
+                            display: block;                          
                             div.skills-tools{
                                 display: block;
-                                padding: 0.5em 1em;
-                            }
+                                padding: 0.5em 1em;                                
+                            }                            
                         }   
                     }     
                     div.projects{
