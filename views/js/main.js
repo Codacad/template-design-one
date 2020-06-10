@@ -39,27 +39,22 @@ document.addEventListener('DOMContentLoaded', function(){
     const underDev = document.querySelector('div.under-development-inform');
     const label = document.querySelector('div.under-development-inform div.label');
     const closeLabel = document.querySelector('div.under-development-inform div.label div.contents a');          
-    // underDev.classList.add('show-under-development')
-    // label.classList.add('show-label')    
-    // closeLabel.addEventListener('click', (e) => {
-    //     e.preventDefault()
-    //     underDev.classList.remove('show-under-development')
-    //     label.classList.remove('show-label')
-    // })    
+    let title = document.querySelector('title').innerHTML;
+    if(title == 'CodAcad'){
+        underDev.classList.add('show-under-development')    
+        label.classList.add('show-label')    
+        closeLabel.addEventListener('click', (e) => {
+            e.preventDefault()
+            underDev.classList.remove('show-under-development')
+            label.classList.remove('show-label')
+        })    
+    }
     window.onclick = (e) => {        
         if(e.target.id == 'under-development'){
             underDev.classList.remove('show-under-development')
             label.classList.remove('show-label')
         }
     }
-
-    // const allAnchor = document.querySelectorAll('a');
-    // allAnchor.forEach(anchor => {
-    //     const href = anchor.getAttribute("href");
-    //     if(href == "#"){
-            
-    //     }
-    // })
 
     document.querySelectorAll('div.frequency span.bar').forEach(function(progress){
         const span = document.createElement('span');
