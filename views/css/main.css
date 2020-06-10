@@ -1100,6 +1100,8 @@ div.resume-container div#resume div.resume-contents div.body div.main div.conten
 div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.front-end ul li span:nth-child(2) div.frequency span.bar span.progress, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.back-end ul li span:nth-child(2) div.frequency span.bar span.progress, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.other ul li span:nth-child(2) div.frequency span.bar span.progress {
   content: "";
   position: absolute;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
   left: 0;
   top: 0;
   height: 100%;

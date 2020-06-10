@@ -125,7 +125,7 @@ nav#navbar{
             }            
             a:hover{                
                 color: rgba(255, 255, 255, 0.9);
-                transition: 200ms ease-in-out;   
+                transition: 200ms ease-in-out;                 
             }
             ul{
                 position: absolute;
@@ -937,10 +937,11 @@ div.resume-container{
                                                     background-color: rgba(0,0,0,.1);                                                    
                                                     border-radius: 5px;
                                                     box-shadow: inset 0px 0px 5px rgba(0,0,0,.5);
-                                                    position: relative;
+                                                    position: relative;                                                    
                                                     span.progress{
                                                         content: "";
                                                         position: absolute;
+                                                        transition: 200ms ease-in-out;
                                                         left: 0;
                                                         top: 0;
                                                         height: 100%;                                                                                                            
