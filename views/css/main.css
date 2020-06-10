@@ -1137,11 +1137,80 @@ div.resume-container div#resume div.resume-contents div.body div.interest {
     display: block;
     padding: 0.5em 1em;
   }
+  div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.front-end ul, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.back-end ul, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.other ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.front-end ul li, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.back-end ul li, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.other ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.front-end ul li span.icon, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.back-end ul li span.icon, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.other ul li span.icon {
+    width: 15px;
+    height: 15px;
+    background-color: cornflowerblue;
+    color: #fff;
+    margin-right: 10px;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.front-end ul li span.icon span, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.back-end ul li span.icon span, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.other ul li span.icon span {
+    font-size: 12px;
+  }
+  div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.front-end ul li span:nth-child(2), div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.back-end ul li span:nth-child(2), div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.other ul li span:nth-child(2) {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.8);
+  }
   div.resume-container div#resume div.resume-contents div.body div.projects div.content {
     padding: .5em 1em;
   }
+  div.resume-container div#resume div.resume-contents div.body div.projects div.content div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  div.resume-container div#resume div.resume-contents div.body div.projects div.content div span.icon {
+    width: 15px;
+    height: 15px;
+    background-color: cornflowerblue;
+    color: #fff;
+    margin-right: 10px;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  div.resume-container div#resume div.resume-contents div.body div.projects div.content div span.icon span {
+    font-size: 12px;
+  }
+  div.resume-container div#resume div.resume-contents div.body div.projects div.content div a {
+    font-size: 16px;
+  }
   div.resume-container div#resume div.resume-contents div.body div.interest div.content {
     padding: .5em 1em;
+    font-size: 16px;
   }
   div.resume-container div#resume div.resume-contents div.body div.education div.detail {
     padding: .5em 1em;
