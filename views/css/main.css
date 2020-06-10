@@ -23,6 +23,16 @@ nav#navbar.no-shadow {
   -webkit-box-shadow: none;
           box-shadow: none;
   border-bottom: none;
+  background-color: #333333;
+}
+
+nav#navbar.no-shadow ul li ul {
+  background-color: #333333;
+  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border: none;
 }
 
 nav#navbar {
@@ -725,7 +735,7 @@ div.resume-container div#resume {
   top: 55px;
   width: 100%;
   min-height: 100vh;
-  background-color: #0c2a42;
+  background-color: #f7f7f7;
 }
 
 div.resume-container div#resume div.resume-contents div.header {
@@ -745,7 +755,7 @@ div.resume-container div#resume div.resume-contents div.header div.social-profil
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(241, 59, 59, 0.3);
+  background-color: rgba(0, 0, 0, 0.1);
   height: 50px;
 }
 
@@ -773,7 +783,7 @@ div.resume-container div#resume div.resume-contents div.header div.social-profil
   color: rgba(255, 255, 255, 0.9);
   -webkit-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
-  background-color: rgba(241, 59, 59, 0.3);
+  background-color: #f13b3b;
   font-size: 1.5rem;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -784,6 +794,7 @@ div.resume-container div#resume div.resume-contents div.header div.social-profil
 }
 
 div.resume-container div#resume div.resume-contents div.header div.header-detail {
+  background-color: rgba(13, 90, 233, 0.7);
   display: block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -791,7 +802,6 @@ div.resume-container div#resume div.resume-contents div.header div.header-detail
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(255, 255, 255, 0.1);
 }
 
 div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective {
@@ -815,7 +825,8 @@ div.resume-container div#resume div.resume-contents div.header div.header-detail
   background-size: cover;
   margin: auto;
   border-radius: 10px;
-  opacity: .7;
+  border-radius: 50%;
+  border: 5px solid cornflowerblue;
 }
 
 div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective {
@@ -824,20 +835,28 @@ div.resume-container div#resume div.resume-contents div.header div.header-detail
 }
 
 div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective div.name h3 {
-  color: rgba(241, 59, 59, 0.8);
+  color: #333333;
   font-size: 1.8rem;
   letter-spacing: 2px;
   line-height: .8em;
 }
 
 div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective div.name span {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective div.objective {
-  margin-top: 10px;
-  color: rgba(255, 255, 255, 0.7);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: rgba(255, 255, 255, 0.8);
   line-height: 1.4em;
+  padding-left: 1em;
+  border-left: 2px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 2px 0px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 2px 0px 0px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  font-size: 18px;
+  margin-left: 5px;
 }
 
 div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective div.contact-detail {
@@ -866,16 +885,112 @@ div.resume-container div#resume div.resume-contents div.header div.header-detail
 }
 
 div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective div.contact-detail div strong span {
-  color: rgba(241, 59, 59, 0.8);
+  color: #333333;
   margin-right: 5px;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective div.contact-detail div span {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective div.contact-detail div a {
   color: cornflowerblue;
+}
+
+@media (max-width: 920px) {
+  div.resume-container div#resume div.resume-contents div.header div.header-detail {
+    background-color: rgba(13, 90, 233, 0.7);
+    display: block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 1em;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective {
+    display: block;
+  }
+  div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-image {
+    width: 200px;
+    height: 200px;
+    background-image: url("../images/Photo_2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+    border-radius: 10px;
+    border-radius: 50%;
+    border: 5px solid cornflowerblue;
+  }
+  div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 1em;
+    margin-top: 20px;
+  }
+  div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective div.name h3 {
+    -webkit-columns: #333333;
+            columns: #333333;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    line-height: .8em;
+  }
+  div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective div.name span {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective div.objective {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.4em;
+    padding-left: 1em;
+    border-left: 2px solid rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: inset 2px 0px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: inset 2px 0px 0px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    font-size: 16px;
+    margin-left: 5px;
+  }
+  div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective div.contact-detail {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: block;
+    margin-top: 20px;
+  }
+  div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective div.contact-detail div:last-child {
+    border-right: none;
+  }
+  div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective div.contact-detail div:last-child {
+    margin-bottom: 0;
+  }
+  div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective div.contact-detail div {
+    border-right: none;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-right: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 10px;
+  }
+  div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective div.contact-detail div strong {
+    color: #fff;
+    margin-right: 10px;
+  }
+  div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective div.contact-detail div strong span {
+    color: #333333;
+    margin-right: 5px;
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective div.contact-detail div span {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  div.resume-container div#resume div.resume-contents div.header div.header-detail div.profile-and-objective div.profile-name-and-objective div.contact-detail div a {
+    color: rgba(0, 0, 0, 0.8);
+  }
 }
 
 div.resume-container div#resume div.resume-contents div.body {
@@ -893,6 +1008,134 @@ div.resume-container div#resume div.resume-contents div.body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 1em;
+}
+
+div.resume-container div#resume div.resume-contents div.body div.main div.contents h2 {
+  color: rgba(241, 59, 59, 0.9);
+  margin: 10px 0px;
+  font-size: 180%;
+  position: relative;
+}
+
+div.resume-container div#resume div.resume-contents div.body div.main div.contents div.professional-summary p {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 18px;
+}
+
+div.resume-container div#resume div.resume-contents div.body div.main div.contents div.education {
+  margin-top: 20px;
+}
+
+div.resume-container div#resume div.resume-contents div.body div.main div.contents div.education div.detail div.degree {
+  margin-top: 10px;
+}
+
+div.resume-container div#resume div.resume-contents div.body div.main div.contents div.education div.detail div.degree div {
+  line-height: 1.7em;
+}
+
+div.resume-container div#resume div.resume-contents div.body div.main div.contents div.education div.detail div.degree div strong {
+  font-size: 110%;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+div.resume-container div#resume div.resume-contents div.body div.main div.contents div.education div.detail div.degree div span {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools {
+  margin-top: 20px;
+}
+
+div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.front-end ul, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.back-end ul, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.other ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.front-end ul li, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.back-end ul li, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.other ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.front-end ul li span.icon, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.back-end ul li span.icon, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.other ul li span.icon {
+  width: 20px;
+  height: 20px;
+  background-color: cornflowerblue;
+  color: #fff;
+  margin-right: 10px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.front-end ul li span.icon span, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.back-end ul li span.icon span, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.other ul li span.icon span {
+  font-size: 15px;
+}
+
+div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.front-end ul li span:nth-child(2), div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.back-end ul li span:nth-child(2), div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.other ul li span:nth-child(2) {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.tools h3 {
+  margin: 10px 0px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+div.resume-container div#resume div.resume-contents div.body div.projects div {
+  line-height: 1.7em;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 18px;
+}
+
+div.resume-container div#resume div.resume-contents div.body div.projects div a {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+div.resume-container div#resume div.resume-contents div.body div.interest {
+  line-height: 1.7em;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 18px;
+}
+
+@media (max-width: 920px) {
+  div.resume-container div#resume div.resume-contents div.body {
+    display: block;
+    background-color: #f7f7f7;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 1em;
+    margin-top: 0px;
+  }
+  div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools {
+    display: block;
+  }
+  div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools {
+    display: block;
+  }
 }
 
 div.container-fluid {
