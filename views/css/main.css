@@ -1087,6 +1087,11 @@ div.resume-container div#resume div.resume-contents div.body div.projects div {
 div.resume-container div#resume div.resume-contents div.body div.projects div a {
   text-decoration: none;
   font-size: 18px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+div.resume-container div#resume div.resume-contents div.body div.projects div a:hover {
+  text-decoration: underline;
 }
 
 div.resume-container div#resume div.resume-contents div.body div.interest {
@@ -1106,10 +1111,24 @@ div.resume-container div#resume div.resume-contents div.body div.interest {
     padding-top: 0;
   }
   div.resume-container div#resume div.resume-contents div.body div.main div.contents h2 {
+    position: relative;
     font-size: 150%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.1);
+  }
+  div.resume-container div#resume div.resume-contents div.body div.main div.contents h2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 100px;
+    background-color: rgba(241, 59, 59, 0.8);
+    left: 50%;
+    bottom: -10px;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  div.resume-container div#resume div.resume-contents div.body div.main div.contents div.professional-summary p {
+    padding-top: 1em;
   }
   div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools {
     display: block;

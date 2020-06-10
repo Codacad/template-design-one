@@ -943,7 +943,11 @@ div.resume-container{
                         font-size: 18px;
                         a{
                             text-decoration: none;
-                            font-size: 18px;                        
+                            font-size: 18px;      
+                            color: rgba(0,0,0,.8);                  
+                        }
+                        a:hover{
+                            text-decoration: underline;
                         }
                     }
                 }
@@ -960,14 +964,29 @@ div.resume-container{
                     box-sizing: border-box;
                     padding: 1em;                     
                     margin-top: 0px;
-                    padding-top: 0 ;
+                    padding-top: 0 ;                                        
                     div.main div.contents{
                         h2{
+                            position: relative;
                             font-size: 150%;
-                            border: 1px solid rgba(0,0,0,.1);                            
                             text-align: center;
-                            // padding: .3em;       
-                            background-color: rgba(0,0,0,.1);                     
+                            // padding: .3em;         
+                        }
+                        h2::after{
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            height: 5px;
+                            width: 100px;
+                            background-color: rgba(241, 59, 59, .8);
+                            left: 50%;
+                            bottom: -10px;      
+                            transform: translateX(-50%);                                                  
+                        }
+                        div.professional-summary{
+                            p{
+                               padding-top: 1em;
+                            }
                         }
                         div.skills-and-tools{
                             display: block;                          
