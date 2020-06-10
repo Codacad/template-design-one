@@ -871,7 +871,7 @@ div.resume-container{
                         p{
                             box-sizing: border-box;                                                  
                             color: rgba(0,0,0,.8);
-                            font-size: 18px;
+                            font-size: 16px;
                         }
                     }
                     div.education{
@@ -886,7 +886,7 @@ div.resume-container{
                                         color: rgba(0,0,0,.8);                                      
                                     }
                                     span{
-                                        font-size: 18px;
+                                        font-size: 16px;
                                         color: rgba(0,0,0,.8);
                                     }
                                 }                               
@@ -907,8 +907,8 @@ div.resume-container{
                                         display: flex;                                        
                                         align-items: center;
                                         span.icon{
-                                            width: 20px;
-                                            height: 20px;
+                                            width: 15px;
+                                            height: 15px;
                                             background-color: cornflowerblue;
                                             color: #fff;
                                             margin-right: 10px;
@@ -917,11 +917,11 @@ div.resume-container{
                                             justify-content: center;
                                             align-items: center;
                                             span{
-                                                font-size: 15px;
+                                                font-size: 12px;
                                             }
                                         }
                                         span:nth-child(2){
-                                            font-size: 18px;
+                                            font-size: 16px;
                                             color: rgba(0,0,0,.8);
                                         }
                                     }
@@ -937,24 +937,40 @@ div.resume-container{
                     }
                 }
                 div.projects{
-                    div{
-                        line-height: 1.7em;
-                        color: rgba(0,0,0,.8);
-                        font-size: 18px;
-                        a{
-                            text-decoration: none;
-                            font-size: 18px;      
-                            color: rgba(0,0,0,.8);                  
-                        }
-                        a:hover{
-                            text-decoration: underline;
+                    div.content{
+                        padding: .5em 0em;
+                        div{
+                            display: flex;                                
+                            align-items: center;
+                            span.icon{
+                                width: 15px;
+                                height: 15px;
+                                background-color: cornflowerblue;
+                                color: #fff;
+                                margin-right: 10px;
+                                border-radius: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                span{
+                                    font-size: 12px;
+                                }
+                            }
+                            a{
+                                font-size: 16px;
+                                color: rgba(0,0,0,.8);
+                                text-decoration: none;
+                            }
+                            a:hover{
+                                text-decoration: underline;
+                            }
                         }
                     }
-                }
+                }            
                 div.interest{
                     line-height: 1.7em;
                     color: rgba(0,0,0,.8);
-                    font-size: 18px;
+                    font-size: 16px;
                 }
             }                                   
             @media (max-width:920px){                
@@ -992,7 +1008,7 @@ div.resume-container{
                             display: block;                          
                             div.skills-tools{
                                 display: block;
-                                padding: 0.5em 1em;                                
+                                padding: 0.5em 0em;                                
                                 div.front-end, div.back-end, div.other{
                                     ul{
                                         padding: 0;
@@ -1027,7 +1043,7 @@ div.resume-container{
                     }     
                     div.projects{
                         div.content{
-                            padding: .5em 1em;
+                            padding: .5em 0em;
                             div{
                                 display: flex;                                
                                 align-items: center;
@@ -1053,18 +1069,21 @@ div.resume-container{
                     }            
                     div.interest{
                         div.content{
-                            padding: .5em 1em;
+                            padding: .5em 0em;
                             font-size: 16px;
                         }
                     }   
                     div.education{
                         div.detail{
-                            padding: .5em 1em;
+                            padding: .5em 0em;
+                            span{
+                                font-size: 16px;
+                            }
                         }
                     }
                     div.professional-summary{
                         p{
-                            padding: .5em 1em;
+                            padding: .5em 0em;                            
                         }
                     }
                 }

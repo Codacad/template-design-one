@@ -995,7 +995,7 @@ div.resume-container div#resume div.resume-contents div.body div.main div.conten
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: rgba(0, 0, 0, 0.8);
-  font-size: 18px;
+  font-size: 16px;
 }
 
 div.resume-container div#resume div.resume-contents div.body div.main div.contents div.education {
@@ -1016,7 +1016,7 @@ div.resume-container div#resume div.resume-contents div.body div.main div.conten
 }
 
 div.resume-container div#resume div.resume-contents div.body div.main div.contents div.education div.detail div.degree div span {
-  font-size: 18px;
+  font-size: 16px;
   color: rgba(0, 0, 0, 0.8);
 }
 
@@ -1047,8 +1047,8 @@ div.resume-container div#resume div.resume-contents div.body div.main div.conten
 }
 
 div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.front-end ul li span.icon, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.back-end ul li span.icon, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.other ul li span.icon {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   background-color: cornflowerblue;
   color: #fff;
   margin-right: 10px;
@@ -1065,11 +1065,11 @@ div.resume-container div#resume div.resume-contents div.body div.main div.conten
 }
 
 div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.front-end ul li span.icon span, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.back-end ul li span.icon span, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.other ul li span.icon span {
-  font-size: 15px;
+  font-size: 12px;
 }
 
 div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.front-end ul li span:nth-child(2), div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.back-end ul li span:nth-child(2), div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.other ul li span:nth-child(2) {
-  font-size: 18px;
+  font-size: 16px;
   color: rgba(0, 0, 0, 0.8);
 }
 
@@ -1078,26 +1078,55 @@ div.resume-container div#resume div.resume-contents div.body div.main div.conten
   color: rgba(0, 0, 0, 0.8);
 }
 
-div.resume-container div#resume div.resume-contents div.body div.projects div {
-  line-height: 1.7em;
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 18px;
+div.resume-container div#resume div.resume-contents div.body div.projects div.content {
+  padding: .5em 0em;
 }
 
-div.resume-container div#resume div.resume-contents div.body div.projects div a {
+div.resume-container div#resume div.resume-contents div.body div.projects div.content div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.resume-container div#resume div.resume-contents div.body div.projects div.content div span.icon {
+  width: 15px;
+  height: 15px;
+  background-color: cornflowerblue;
+  color: #fff;
+  margin-right: 10px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.resume-container div#resume div.resume-contents div.body div.projects div.content div span.icon span {
+  font-size: 12px;
+}
+
+div.resume-container div#resume div.resume-contents div.body div.projects div.content div a {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.8);
   text-decoration: none;
-  font-size: 18px;
-  color: rgba(0, 0, 0, 0.8);
 }
 
-div.resume-container div#resume div.resume-contents div.body div.projects div a:hover {
+div.resume-container div#resume div.resume-contents div.body div.projects div.content div a:hover {
   text-decoration: underline;
 }
 
 div.resume-container div#resume div.resume-contents div.body div.interest {
   line-height: 1.7em;
   color: rgba(0, 0, 0, 0.8);
-  font-size: 18px;
+  font-size: 16px;
 }
 
 @media (max-width: 920px) {
@@ -1135,7 +1164,7 @@ div.resume-container div#resume div.resume-contents div.body div.interest {
   }
   div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools {
     display: block;
-    padding: 0.5em 1em;
+    padding: 0.5em 0em;
   }
   div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.front-end ul, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.back-end ul, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.other ul {
     padding: 0;
@@ -1175,7 +1204,7 @@ div.resume-container div#resume div.resume-contents div.body div.interest {
     color: rgba(0, 0, 0, 0.8);
   }
   div.resume-container div#resume div.resume-contents div.body div.projects div.content {
-    padding: .5em 1em;
+    padding: .5em 0em;
   }
   div.resume-container div#resume div.resume-contents div.body div.projects div.content div {
     display: -webkit-box;
@@ -1209,14 +1238,17 @@ div.resume-container div#resume div.resume-contents div.body div.interest {
     font-size: 16px;
   }
   div.resume-container div#resume div.resume-contents div.body div.interest div.content {
-    padding: .5em 1em;
+    padding: .5em 0em;
     font-size: 16px;
   }
   div.resume-container div#resume div.resume-contents div.body div.education div.detail {
-    padding: .5em 1em;
+    padding: .5em 0em;
+  }
+  div.resume-container div#resume div.resume-contents div.body div.education div.detail span {
+    font-size: 16px;
   }
   div.resume-container div#resume div.resume-contents div.body div.professional-summary p {
-    padding: .5em 1em;
+    padding: .5em 0em;
   }
 }
 
