@@ -310,9 +310,6 @@ nav#navbar div.login-register a:hover {
     color: rgba(255, 255, 255, 0.76);
     background-color: rgba(0, 0, 0, 0.4);
   }
-  nav#navbar a.hamburger span {
-    margin-top: 2px;
-  }
   nav#navbar a.brand-logo {
     float: left;
     padding: 0px 10px;
