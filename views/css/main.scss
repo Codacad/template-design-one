@@ -904,8 +904,10 @@ div.resume-container{
                                     margin: 0;
                                     list-style: none;
                                     li{
-                                        display: flex;                                        
-                                        align-items: center;
+                                        display: flex;   
+                                        width: 100%;
+                                        line-height: 1em;
+                                        margin: 10px 0px;
                                         span.icon{
                                             width: 15px;
                                             height: 15px;
@@ -922,7 +924,34 @@ div.resume-container{
                                         }
                                         span:nth-child(2){
                                             font-size: 16px;
-                                            color: rgba(0,0,0,.8);
+                                            color: rgba(0,0,0,.8);  
+                                            div.frequency{
+                                                width: 250px;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;                                                                                                
+                                                span.bar{
+                                                    display: block;
+                                                    width: 100%;
+                                                    height: 10px;
+                                                    background-color: rgba(0,0,0,.1);                                                    
+                                                    border-radius: 5px;
+                                                    box-shadow: inset 0px 0px 5px rgba(0,0,0,.5);
+                                                    position: relative;
+                                                    span.progress{
+                                                        content: "";
+                                                        position: absolute;
+                                                        left: 0;
+                                                        top: 0;
+                                                        height: 100%;                                                                                                            
+                                                        background-color: cornflowerblue;
+                                                        border-radius: 5px;
+                                                    }
+                                                }                                                
+                                                span.percentage{
+                                                    margin-left: 5px;
+                                                }
+                                            }                                          
                                         }
                                     }
                                 }
@@ -1016,7 +1045,8 @@ div.resume-container{
                                         list-style: none;
                                         li{
                                             display: flex;                                        
-                                            align-items: center;
+                                            line-height: 1em;
+                                            margin: 10px;
                                             span.icon{
                                                 width: 15px;
                                                 height: 15px;

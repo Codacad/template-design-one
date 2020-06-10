@@ -1041,9 +1041,9 @@ div.resume-container div#resume div.resume-contents div.body div.main div.conten
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  width: 100%;
+  line-height: 1em;
+  margin: 10px 0px;
 }
 
 div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.front-end ul li span.icon, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.back-end ul li span.icon, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.other ul li span.icon {
@@ -1071,6 +1071,44 @@ div.resume-container div#resume div.resume-contents div.body div.main div.conten
 div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.front-end ul li span:nth-child(2), div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.back-end ul li span:nth-child(2), div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.other ul li span:nth-child(2) {
   font-size: 16px;
   color: rgba(0, 0, 0, 0.8);
+}
+
+div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.front-end ul li span:nth-child(2) div.frequency, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.back-end ul li span:nth-child(2) div.frequency, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.other ul li span:nth-child(2) div.frequency {
+  width: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.front-end ul li span:nth-child(2) div.frequency span.bar, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.back-end ul li span:nth-child(2) div.frequency span.bar, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.other ul li span:nth-child(2) div.frequency span.bar {
+  display: block;
+  width: 100%;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.front-end ul li span:nth-child(2) div.frequency span.bar span.progress, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.back-end ul li span:nth-child(2) div.frequency span.bar span.progress, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.other ul li span:nth-child(2) div.frequency span.bar span.progress {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: cornflowerblue;
+  border-radius: 5px;
+}
+
+div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.front-end ul li span:nth-child(2) div.frequency span.percentage, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.back-end ul li span:nth-child(2) div.frequency span.percentage, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.other ul li span:nth-child(2) div.frequency span.percentage {
+  margin-left: 5px;
 }
 
 div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.tools h3 {
@@ -1175,9 +1213,8 @@ div.resume-container div#resume div.resume-contents div.body div.interest {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    line-height: 1em;
+    margin: 10px;
   }
   div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.front-end ul li span.icon, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.back-end ul li span.icon, div.resume-container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.other ul li span.icon {
     width: 15px;

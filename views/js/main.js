@@ -39,14 +39,13 @@ document.addEventListener('DOMContentLoaded', function(){
     const underDev = document.querySelector('div.under-development-inform');
     const label = document.querySelector('div.under-development-inform div.label');
     const closeLabel = document.querySelector('div.under-development-inform div.label div.contents a');          
-    underDev.classList.add('show-under-development')
-    label.classList.add('show-label')
-    
-    closeLabel.addEventListener('click', (e) => {
-        e.preventDefault()
-        underDev.classList.remove('show-under-development')
-        label.classList.remove('show-label')
-    })    
+    // underDev.classList.add('show-under-development')
+    // label.classList.add('show-label')    
+    // closeLabel.addEventListener('click', (e) => {
+    //     e.preventDefault()
+    //     underDev.classList.remove('show-under-development')
+    //     label.classList.remove('show-label')
+    // })    
     window.onclick = (e) => {        
         if(e.target.id == 'under-development'){
             underDev.classList.remove('show-under-development')
@@ -61,4 +60,13 @@ document.addEventListener('DOMContentLoaded', function(){
             
     //     }
     // })
+
+    document.querySelectorAll('div.frequency span.bar').forEach(function(progress){
+        const span = document.createElement('span');
+        span.className = 'progress';
+        progress.append(span);
+        const percentage = progress.nextElementSibling.innerHTML;
+        progress.querySelector('span.progress').style.width = `${percentage}`       ;
+        
+    })    
 })
