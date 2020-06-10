@@ -796,43 +796,21 @@ div.resume-container{
                         // background-color: rgba(255, 255, 255, 0.1);
                         // height: 500px;
                         div.profile-and-objective{
-                            display: block;
-                            div.profile-image{
-                                width: 200px;
-                                height: 200px;
-                                background-image: url('../images/Photo_2.jpg');                                
-                                background-repeat: no-repeat;
-                                background-size: cover;
-                                margin: auto;
-                                border-radius: 10px;
-                                border-radius: 50%;                            
-                                border: 5px solid cornflowerblue;
-                            }
+                            display: block;                           
                             div.profile-name-and-objective{                                                                                        
-                                box-sizing: border-box;
-                                padding: 1em;
+                                box-sizing: border-box;                            
                                 margin-top: 20px;
                                 div.name{
                                     h3{
                                         columns: #333333;
                                         font-size: 1.6rem;
-                                        letter-spacing:2px;
-                                        line-height: .8em;
                                     }
                                     span{
                                         color: rgba(255, 255,255, 0.5);
                                     }
                                 }
                                 div.objective{       
-                                    box-sizing: border-box;                         
-                                    color:rgba(255,255, 255, .8);
-                                    line-height: 1.4em;
-                                    padding-left: 1em;
-                                    border-left: 2px solid rgba(0,0,0,.2);
-                                    box-shadow: inset 2px 0px 0px rgba(0,0,0,.1);
-                                    margin-top: 10px;
-                                    font-size: 16px;
-                                    margin-left: 5px;
+                                    font-size: 16px;                                    
                                 }
                                 div.contact-detail{
                                     box-sizing: border-box;
@@ -860,10 +838,12 @@ div.resume-container{
                                             }
                                         }
                                         span{
-                                            color: rgba(255,255,255,.5);
+                                            color: rgba(255,255,255,.6);
+                                            font-size: 16px;
                                         }
                                         a{
-                                            color:rgba(0,0,0,.8);
+                                            color:rgba(255,255,255,.6);
+                                            font-size: 16px;
                                         }
                                     }                                
                                 }                            
@@ -983,14 +963,43 @@ div.resume-container{
                     box-sizing: border-box;
                     padding: 1em;                     
                     margin-top: 0px;
+                    padding-top: 0 ;
                     div.main div.contents{
+                        h2{
+                            font-size: 150%;
+                            border: 1px solid rgba(0,0,0,.1);                            
+                            text-align: center;
+                            // padding: .3em;       
+                            background-color: rgba(0,0,0,.1);                     
+                        }
                         div.skills-and-tools{
                             display: block;
                             div.skills-tools{
                                 display: block;
+                                padding: 0.5em 1em;
                             }
                         }   
-                    }                    
+                    }     
+                    div.projects{
+                        div.content{
+                            padding: .5em 1em;
+                        }
+                    }            
+                    div.interest{
+                        div.content{
+                            padding: .5em 1em;
+                        }
+                    }   
+                    div.education{
+                        div.detail{
+                            padding: .5em 1em;
+                        }
+                    }
+                    div.professional-summary{
+                        p{
+                            padding: .5em 1em;
+                        }
+                    }
                 }
             }    
         }
