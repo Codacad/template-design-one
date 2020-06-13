@@ -23,6 +23,10 @@ Router.get('/about',(req, res) => {
 Router.get('/resume',(req, res) => {
     res.render('resume', {title:"Resume"});
 })
+
+Router.get('/singlepageapp', (req, res) => {
+    res.render('singlepageapp', {title:"Single Page App"});
+})
 // Router.get('/blog/articles', (req, res) => {
 //     Articles.find({})
 //         .then(article => {

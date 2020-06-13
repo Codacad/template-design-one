@@ -43,9 +43,7 @@ nav#navbar {
   left: 0;
   z-index: 10;
   line-height: 55px;
-  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
-  background-color: #10293d;
+  background-color: #333333;
 }
 
 nav#navbar a.hamburger {
@@ -544,39 +542,65 @@ div.container {
   width: 100%;
   padding: 1em;
   top: 55px;
-  background-color: #1c415f;
+  background-color: #f7f7f7;
 }
 
 div.container div#blog {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
-div.container div#blog div.more-onside {
+div.container div#blog div.buttons {
+  width: 80%;
+  margin: auto;
+  background-color: rgba(255, 0, 0, 0.1);
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+div.container div#blog div.buttons a {
+  display: inline-block;
+  padding: 1em;
+  text-decoration: none;
+  position: relative;
+  color: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+div.container div#blog div.buttons a:hover {
+  background-color: #f7f7f7;
+}
+
+div.container div#blog div.buttons a.active:hover::after {
+  content: "";
+  background-color: #f7f7f7;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  z-index: -10;
+}
+
+div.container div#blog div.latest-articles {
   border: 2px solid rgba(0, 0, 0, 0.05);
   margin-right: 20px;
-  position: fixed;
-  left: 15px;
-  top: 70px;
-  width: 350px;
-  background-color: rgba(0, 0, 0, 0.05);
+  width: 80%;
+  margin: auto;
+  display: none;
 }
 
-div.container div#blog div.more-onside div.mores {
-  background-color: rgba(241, 59, 59, 0.4);
-}
-
-div.container div#blog div.more-onside div.mores div.heading {
+div.container div#blog div.latest-articles div.mores div.heading {
   text-align: center;
   padding-top: 10px;
-  color: rgba(228, 225, 225, 0.5);
+  color: rgba(0, 0, 0, 0.8);
 }
 
-div.container div#blog div.more-onside div.mores div.more {
+div.container div#blog div.latest-articles div.mores div.more {
   padding: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -584,41 +608,45 @@ div.container div#blog div.more-onside div.mores div.more {
   line-height: 1.5em;
 }
 
-div.container div#blog div.more-onside div.mores div.more div.title a {
+div.container div#blog div.latest-articles div.mores div.more div.title a {
   text-decoration: none;
   margin-bottom: 5px;
 }
 
-div.container div#blog div.more-onside div.mores div.more div.title a h3 {
-  color: rgba(99, 166, 192, 0.8);
-  font-size: 100%;
+div.container div#blog div.latest-articles div.mores div.more div.title a h3 {
+  color: #63a6c0;
+  font-size: 120%;
 }
 
-div.container div#blog div.more-onside div.mores div.more div.title a h3:hover {
+div.container div#blog div.latest-articles div.mores div.more div.title a h3:hover {
   color: #63a6c0;
-  font-size: 100%;
   text-decoration: underline;
 }
 
-div.container div#blog div.more-onside div.mores div.more div.body p {
+div.container div#blog div.latest-articles div.mores div.more div.body p {
   font-size: 15px;
-  color: rgba(226, 220, 220, 0.8);
+  color: rgba(0, 0, 0, 0.8);
 }
 
-div.container div#blog div.more-onside div.mores div.more div.written-by span {
+div.container div#blog div.latest-articles div.mores div.more div.written-by span {
   font-size: 15px;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 div.container div#blog div.articles {
-  margin-left: 370px;
-  display: block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  width: 80%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  margin: auto;
 }
 
 div.container div#blog div.articles div.article {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.02);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-bottom: 5px;
@@ -647,12 +675,12 @@ div.container div#blog div.articles div.article div.article-header div.author-na
 }
 
 div.container div#blog div.articles div.article div.article-header div.author-name h3 {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.8);
   font-size: 100%;
 }
 
 div.container div#blog div.articles div.article div.article-header div.author-name span {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.5);
   font-size: 14px;
 }
 
@@ -663,7 +691,7 @@ div.container div#blog div.articles div.article div.article-body {
 
 div.container div#blog div.articles div.article div.article-body div.title h1 {
   font-size: 120%;
-  color: rgba(99, 166, 192, 0.8);
+  color: #63a6c0;
 }
 
 div.container div#blog div.articles div.article div.article-body div.content {
@@ -672,12 +700,12 @@ div.container div#blog div.articles div.article div.article-body div.content {
 
 div.container div#blog div.articles div.article div.article-body div.content p {
   line-height: 1.6em;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(0, 0, 0, 0.8);
 }
 
 div.container div#blog div.articles div.article div.article-body div.read-more a {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.4);
+  color: #155cdf;
 }
 
 div.container div#blog div.articles div.article div.article-body div.read-more a:hover {
@@ -687,14 +715,28 @@ div.container div#blog div.articles div.article div.article-body div.read-more a
 div.container div#blog div.articles div.article div.article-footer {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: .5em 1em;
   border-top: 2px solid rgba(0, 0, 0, 0.1);
 }
 
+div.container div#blog div.articles div.article div.article-footer div.content {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 10px;
+}
+
 div.container div#blog div.articles div.article div.article-footer div.content a {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  padding: .5em;
   text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+div.container div#blog div.articles div.article div.article-footer div.content a.share {
+  float: right;
   margin-right: 20px;
-  color: rgba(255, 255, 255, 0.6);
 }
 
 @media (max-width: 780px) {
@@ -704,7 +746,7 @@ div.container div#blog div.articles div.article div.article-footer div.content a
     width: 100%;
     display: block;
   }
-  div.container div#blog div.more-onside {
+  div.container div#blog div.latest-articles {
     border: 1px solid rgba(0, 0, 0, 0.05);
     margin-right: 0px;
     position: relative;
@@ -738,6 +780,7 @@ div.resume-container div#resume {
 div.resume-container div#resume div.resume-contents div.header {
   position: relative;
   margin: 0;
+  background-color: #0d5ae9;
 }
 
 div.resume-container div#resume div.resume-contents div.header div.social-profiles {
@@ -746,14 +789,14 @@ div.resume-container div#resume div.resume-contents div.header div.social-profil
   display: flex;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(0, 0, 0, 0.1);
   height: 50px;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 div.resume-container div#resume div.resume-contents div.header div.social-profiles div.profile {
@@ -764,8 +807,8 @@ div.resume-container div#resume div.resume-contents div.header div.social-profil
 
 div.resume-container div#resume div.resume-contents div.header div.social-profiles div.profile a {
   position: relative;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -777,17 +820,14 @@ div.resume-container div#resume div.resume-contents div.header div.social-profil
           align-items: center;
   margin: 0px 10px;
   border-radius: 50%;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.7);
   -webkit-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
-  background-color: #f13b3b;
-  font-size: 1.5rem;
-  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
 }
 
 div.resume-container div#resume div.resume-contents div.header div.social-profiles div.profile a:hover {
-  background-color: rgba(241, 59, 59, 0.8);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 div.resume-container div#resume div.resume-contents div.header div.header-detail {
@@ -2069,6 +2109,91 @@ div#contact div.content div.message button:hover {
   div#contact div.content div.message div.heading h1 {
     text-align: center;
   }
+}
+
+div.single-page-app-container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  top: 55px;
+  box-sizing: border-box;
+}
+
+div.single-page-app-container div.app {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+div.single-page-app-container div.app ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  border: none;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+div.single-page-app-container div.app ul li:nth-child(1) {
+  border-left: 2px solid rgba(0, 0, 0, 0.01);
+}
+
+div.single-page-app-container div.app ul li {
+  float: left;
+}
+
+div.single-page-app-container div.app ul li a.btn {
+  text-decoration: none;
+  float: left;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1em;
+  font-weight: bold;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+div.single-page-app-container div.app ul li a.btn:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+div.single-page-app-container div.app ul li div.page {
+  padding: 1em;
+  position: absolute;
+  left: 0;
+  top: 63px;
+  display: none;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  background-color: #f7f7f7;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-top: none;
+}
+
+div.single-page-app-container div.app ul li a.btn.active {
+  background-color: #f7f7f7;
+  color: rgba(0, 0, 0, 0.6);
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  position: relative;
+  z-index: 1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+div.single-page-app-container div.app ul::after {
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  clear: both;
 }
 
 div.footer {

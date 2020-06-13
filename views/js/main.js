@@ -63,5 +63,31 @@ document.addEventListener('DOMContentLoaded', function(){
         const percentage = progress.nextElementSibling.innerHTML;
         progress.querySelector('span.progress').style.width = `${percentage}`       ;
         
-    })    
+    })            
+    document.querySelector('div.page1').style.display = "block";
+    function showPage(page){
+        document.querySelectorAll('div.page').forEach(div => {
+            div.style.display = 'none'
+        })                
+        document.querySelector(`#${page}`).style.display = 'block';            
+
+    }    
+    function addActiveClass(button){
+        document.querySelectorAll('a.btn').forEach(btn => {
+            btn.classList.remove('active');
+        })
+
+        document.querySelector(`#${button}`).classList.add('active');
+        console.log(button)
+
+    }
+    const primaryTitle = document.querySelector('title').innerHTML
+    document.querySelector('title').innerHTML = `${primaryTitle} (${document.querySelector('a.btn').innerHTML})`
+    document.querySelectorAll('a.btn').forEach(function(btn){        
+        btn.onclick = function(){                                     
+            showPage(this.dataset.page);                              
+            document.querySelector('title').innerHTML = `${primaryTitle} (${this.innerHTML})`                                                               
+            addActiveClass(this.id);
+        }                  
+    })        
 })
