@@ -5,27 +5,24 @@ const Comments = require('../models/comments')
 const Replies = require('../models/replies')
 
 Router.get('/', (req, res) => {
-    res.render('index', {title:"CodAcad"});
+    res.render('index', {
+        title:"CodAcad",
+        AuthUser:req.user
+    });
 })
 Router.get('/blog', (req, res) => {
-    res.render('blog',{title:"Blog"});
+    res.render('blog',{title:"Blog", AuthUser:req.user});
 })
 Router.get('/courses',(req, res) => {
-    res.render('courses', {title:"Courses"});
-})
-Router.get('/contact',(req, res) => {
-    res.render('contact', {title:"Contact"});
+    res.render('courses', {title:"Courses", AuthUser:req.user});
 })
 
-Router.get('/about',(req, res) => {
-    res.render('about', {title:'About'});
-})
 Router.get('/resume',(req, res) => {
-    res.render('resume', {title:"Resume"});
+    res.render('resume', {title:"Resume", AuthUser:req.user});
 })
 
 Router.get('/singlepageapp', (req, res) => {
-    res.render('singlepageapp', {title:"Single Page App"});
+    res.render('singlepageapp', {title:"Single Page App", AuthUser:req.user});
 })
 // Router.get('/blog/articles', (req, res) => {
 //     Articles.find({})

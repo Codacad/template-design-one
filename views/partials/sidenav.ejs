@@ -1,39 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-</head>
-<body>
-    <div class="sidenav-wrapper" id="sidenav-wrapper">
-        
-        <div class="sidenav" id="sidenav">        
-            
-            <a href="#" class="close"><span><i class="fa fa-times"></i></span></a>
-        
-            <div class="nav-items">
-                <div class="login-register">            
-                    <a href="#" class="signup">Register</a>
-                    <a href="#" class="login"><span><i class="fas fa-sign-in-alt"></i></span> Login</a>
-                </div>
-                <ul>
-                <li><a href="/">Home</a></li>
-                <li>
-                    <a class="courses" href="#">Courses</a>
-                    <ul>
-                        <li><a href="#">HTML</a></li>
-                        <li><a href="#">CSS</a></li>
-                        <li><a href="#">JavaScript</a></li>
-                        <li><a href="#">NodeJS</a></li>
-                        <li><a href="#">ExpressJS</a></li>
-                    </ul>
-                </li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/resume">Resume</a></li>                
-            </ul>
+
+<div id="sidenav-wrapper">
+    <nav class="sidenav" id="sidenav">               
+        <div class="header">
+            <span class="close"><span><i class="fas fa-arrow-left"></i></span></span>
         </div>
-    </div>
-       
-    </div>
-</body>
-</html>
+        <div class="sidenav-contents">
+            <!-- <div class="btns">
+                <% if (typeof AuthUser != 'undefined') { %>                        
+                    <!-- <a href="/logout" class="logout" ><span>Logout</span></a>                       -->
+                <% } %>        
+                <!-- <a href="/create-new-article" class="create-new-article" id=<%=title == "Create Article" ? "hide-btn" : ""%>> <span class="article-icon"><i class="far fa-newspaper"></i></span><span>Create Article</span></a>                                 -->
+                <!-- <div class="login-register">                                    
+                    <% if (typeof AuthUser == 'undefined') { %>
+                        <a href="/login" class="login"> <span class="article-icon"><i class="fas fa-sign-in-alt"></i></span> <span>Login</span></a>                
+                        <a href="/register" class="register" id=<%=title == "Create Article" ? "hide-btn" : ""%>> <span class="article-icon"><i class="fas fa-user-circle"></i></span> <span>Register</span></a>                
+                    <% } %>
+                </div> 
+            </div> -->
+            <div class="search">
+                <input type="text" placeholder="Search" class="search">
+                <div class="search-icon">
+                    <span class="material-icons">search</span>
+                </div>
+            </div>
+            
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/resume">Resume</a></li>
+            </ul>        
+        </div>
+    </nav>
+</div>
+<script src="../js/main.js"></script>

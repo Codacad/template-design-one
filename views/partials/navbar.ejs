@@ -1,32 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <nav id="navbar" <% if (typeof title != "undefined"){ %>class=<%- title == "Resume" ? "no-shadow" : ""%><% } %>>    
-        <a href="#" class="hamburger"><span><i class="fas fa-bars"></i></span></a>
-        <a href="/" class="brand-logo"><span class="cod">{_Cod</span><span class="acad">Acad_}</span></a>
-        <ul>
-            <li <% if (typeof title != "undefined"){ %>class=<%- title == "CodAcad" ? "active" : ""%><% } %>><a href="/">Home</a></li>
-            <li <% if (typeof title != "undefined"){ %>class=<%- title == "Courses" ? "active" : ""%><% } %>><a class="courses" href="#courses">Courses</a>
-                <ul>
-                    <li><a href="#">HTML</a></li>
-                    <li><a href="#">CSS</a></li>
-                    <li><a href="#">JavaScript</a></li>
-                    <li><a href="#">NodeJS</a></li>
-                    <li><a href="#">ExpressJS</a></li>
-                </ul>
-            </li>
-            <li <% if (typeof title != "undefined"){ %>class=<%- title == "Blog" ? "active" : ""%><% } %>><a href="/blog">Blog</a></li>
-            <li <% if (typeof title != "undefined"){ %>class=<%- title == "Resume" ? "active" : ""%><% } %>><a href="/resume">Resume</a></li>
-            
-        </ul>
-        <div class="login-register">            
-            <a href="#" class="signup">Register</a>
-            <a href="#" class="login"><span><i class="fas fa-sign-in-alt"></i></span> Login</a>
-        </div>
-    </nav>        
-</body>
-</html>
+<nav id="navbar">        
+    <div class="nav-left-menus">
+        <span class="hamburger-icon"><span><i class="fas fa-bars"></i></span></span>
+        <a href="/" class="brand-logo"><span class="f">C</span>od<span class="w">A</span>cad</a>                                      
+    </div>
+    <div class="nav-right-menus">            
+        <div class="buttons" style=<%= AuthUser ? "" : "display:flex;"%>>            
+            <% if (typeof AuthUser == "undefined") { %>
+            <!-- <a href="/login" class="login" id=<%=title == "Login" ? "hide-login" : ""%>> <span class="login-icon"><i class="fas fa-sign-in-alt"></i></span> <span>Login</span></a>                             -->
+            <% } %>                            
+            <div class="search" id="<%= title == "Resume" ? "hide-search-box" : ""%>">
+                <input type="text" placeholder="Search" class="search">
+                <div class="search-icon">
+                    <span class="material-icons">search</span>
+                </div>
+            </div>
+            <ul class="user-menus">
+                <% if (typeof AuthUser != "undefined") { %>
+                    <li class="user">
+                        <a href="">
+                            <img src="../images/profile-pic.png" alt="profile Pic">
+                            <span><%= AuthUser.name %> </span>
+                        </a>
+                    </li>
+                <% } %>
+                <li>
+                    <span class="caret"><span><i class="fas fa-caret-down"></i></span></span>
+                    <div id="dropdown-wrapper">
+                        <ul>
+                            <% if (typeof AuthUser != "undefined") { %>
+                                <li class="user">
+                                    <a href="">
+                                        <img src="../images/profile-pic.png" alt="profile Pic">
+                                        <span><%= AuthUser.name %> </span>
+                                    </a>
+                                </li>
+                            <% } %>                           
+                            <li class="social-proflies">
+                                <span class="facebook">
+                                    <a target="_blank" href="https://www.facebook.com/Farooquis-world-100432181470217"><span><i class="fab fa-facebook"></i></span></a>
+                                    <!-- <span class="tooltip">Facebook</span> -->
+                                </span>
+                                <span class="twitter">
+                                    <a target="_blank" href="https://twitter.com/FarmanFarooqui4"><span><i class="fab fa-twitter"></i></span></a>
+                                    <!-- <span class="tooltip">Twitter</span> -->
+                                </span>
+                                <span class="youtube">
+                                    <a target="_blank" href="https://www.youtube.com/channel/UCqIrhdoygYnHIIeyYsYBcKA"><span><i class="fab fa-youtube"></i></span></a>
+                                    <!-- <span class="tooltip">Youtube</span> -->
+                                </span>
+                                <span class="instagram">
+                                    <a target="_blank" href="https://www.instagram.com/farmanfarooqui4/"><span><i class="fab fa-instagram"></i></span></a>
+                                    <!-- <span class="tooltip">Instagram</span> -->
+                                </span>
+                            </li>
+                            <% if (typeof AuthUser != 'undefined') { %>   
+                                <li><a href=""> <span class="material-icons">dashboard</span><span>Dashboard</span></a></li>
+                            <% } %>                        
+                            <li><a href="/create-new-article" class="create-new-article" id=<%=title == "Create Article" ? "hide-btn" : ""%>> <span class="article-icon"><i class="far fa-newspaper"></i></span> <span>Create Article</span></a></li>                                                    
+                            <li class="login-register" id="<%= AuthUser ? "loggedIn" : ""%>">
+                                <a href="/login" class="mobile-login-btn" id=<%=title == "Login" ? "hide-login" : ""%>> <span class="login-icon"><i class="fas fa-sign-in-alt"></i></span> <span>Login</span></a>
+                                <a href="/register" class="mobile-register-btn" id=<%=title == "Register" ? "hide-register" : ""%>> <span class="material-icons">account_circle</span></span> <span>Register</span></a>
+                            </li>
+                            
+                            <% if (typeof AuthUser != 'undefined') { %>   
+                                <li><a href="/logout" class="logout" ><span>Logout</span></a></li>
+                            <% } %>                        
+                            
+                        </ul>
+                    </div>
+                </li>
+            </ul>                
+        </div>            
+    </div>
+</nav>

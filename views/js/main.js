@@ -1,41 +1,91 @@
 document.addEventListener('DOMContentLoaded', function(){
-    const sidenav =  document.querySelector('#sidenav');
-    const close = sidenav.querySelector('a.close');
-    const hamburger = document.querySelector('.hamburger');
-    const sidenavWrapper = document.querySelector('div.sidenav-wrapper');
-    hamburger.addEventListener('click', function(e){
-        e.preventDefault();
-        sidenavWrapper.classList.toggle('toggle-sidenav-wrapper')
-        sidenav.classList.toggle('toggle-sidenav');
-    })
-    close.addEventListener('click', function(e){
-        e.preventDefault();
-        sidenav.classList.remove('toggle-sidenav');
-        sidenavWrapper.classList.remove('toggle-sidenav-wrapper')
+    const hamburgerIcon = document.querySelector('div.nav-left-menus span.hamburger-icon');    
+    document.querySelectorAll('#article').forEach(article => {
+        article.addEventListener('click', (e) => {
+            console.log(e.target.id)
+        })
     })
 
-    window.onclick = function(e){
-        if(sidenav.classList.contains('toggle-sidenav')){
-            if(e.target.id == 'sidenav-wrapper' || e.target.id == "navbar"){
-                sidenav.classList.remove('toggle-sidenav');
-                sidenavWrapper.classList.remove('toggle-sidenav-wrapper')
-            }
-        }
-    }
-    const coursesSubmenu = sidenav.querySelector('a.courses');
-    const coursesAfter = sidenav.querySelector('a.courses::after');
-    const sidenavdropdown = sidenav.querySelector('li ul');
-    coursesSubmenu.addEventListener('click', function(){
-        sidenavdropdown.classList.toggle('show-submenu')
-        coursesSubmenu.classList.toggle('up');        
+    hamburgerIcon.addEventListener('click', function(e){
+        e.preventDefault()
+        document.querySelector('div#sidenav-wrapper').classList.add('sidenav-wrapper-toggle')
+        document.querySelector('nav.sidenav').classList.add('sidenav-toggle');
+        document.querySelector('body').classList.add("overflow-hidden");
+        document.querySelector('body').style.transition= "400ms ease-in-out";
+        console.log(e.target)
     })
     
-})
-    const underDev = document.querySelector('div.under-development-inform');
-    const label = document.querySelector('div.under-development-inform div.label');
-    const closeLabel = document.querySelector('div.under-development-inform div.label div.contents a');          
+    document.querySelector('nav.sidenav div.header span.close').addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelector('div#sidenav-wrapper').classList.remove('sidenav-wrapper-toggle')
+        document.querySelector('nav.sidenav').classList.remove('sidenav-toggle');
+        document.querySelector('body').classList.remove("overflow-hidden");
+    }) 
+
+    const caret = document.querySelector('ul.user-menus li span.caret')
+    let trueOrFalse = false;
+    caret.addEventListener('click', (e) => {        
+        e.preventDefault();       
+        trueOrFalse = !trueOrFalse
+        console.log(trueOrFalse)
+        
+        if(trueOrFalse){
+            document.querySelector('ul.user-menus li ul').classList.add('toggle-user-menus')
+            document.querySelector('div#dropdown-wrapper').classList.add('toggle-dropdown')
+        }else{
+            document.querySelector('ul.user-menus li ul').classList.remove('toggle-user-menus')
+            document.querySelector('div#dropdown-wrapper').classList.remove('toggle-dropdown')
+        }
+    }) 
+    window.onclick = (e) => {
+        if(e.target.id == "sidenav-wrapper"){
+            document.querySelector('div#sidenav-wrapper').classList.remove('sidenav-wrapper-toggle');
+            document.querySelector('nav.sidenav').classList.remove('sidenav-toggle');
+            document.querySelector('body').classList.remove("overflow-hidden");
+        }        
+        if(e.target.id == 'dropdown-wrapper'){
+            document.querySelector('ul.user-menus li ul').classList.remove('toggle-user-menus')
+            document.querySelector('div#dropdown-wrapper').classList.remove('toggle-dropdown')
+        }
+         if(e.target.id == 'under-development'){
+            underDev.classList.remove('show-under-development')
+            label.classList.remove('show-label')
+        }       
+        document.querySelectorAll('div.frequency span.bar').forEach(function(progress){
+            const span = document.createElement('span');
+            span.className = 'progress';
+            progress.append(span);
+            const percentage = progress.nextElementSibling.innerHTML;
+            progress.querySelector('span.progress').style.width = `${percentage}`       ;
+            
+        })            
+        document.querySelector('div.page1').style.display = "block";
+        function showPage(page){
+            document.querySelectorAll('div.page').forEach(div => {
+                div.style.display = 'none'
+            })                
+            document.querySelector(`#${page}`).style.display = 'block';            
     
-    window.addEventListener('load', (e) => {
+        }    
+        function addActiveClass(button){
+            document.querySelectorAll('a.btn').forEach(btn => {
+                btn.classList.remove('active');
+            })
+    
+            document.querySelector(`#${button}`).classList.add('active');
+            console.log(button)
+    
+        }
+        const primaryTitle = document.querySelector('title').innerHTML
+        document.querySelector('title').innerHTML = `${primaryTitle} (${document.querySelector('a.btn').innerHTML})`
+        document.querySelectorAll('a.btn').forEach(function(btn){        
+            btn.onclick = function(){                                     
+                showPage(this.dataset.page);                              
+                document.querySelector('title').innerHTML = `${primaryTitle} (${this.innerHTML})`                                                               
+                addActiveClass(this.id);
+            }                  
+        })     
+    }
     const underDev = document.querySelector('div.under-development-inform');
     const label = document.querySelector('div.under-development-inform div.label');
     const closeLabel = document.querySelector('div.under-development-inform div.label div.contents a');          
@@ -48,46 +98,8 @@ document.addEventListener('DOMContentLoaded', function(){
             underDev.classList.remove('show-under-development')
             label.classList.remove('show-label')
         })    
-    }
-    window.onclick = (e) => {        
-        if(e.target.id == 'under-development'){
-            underDev.classList.remove('show-under-development')
-            label.classList.remove('show-label')
-        }
-    }
-
-    document.querySelectorAll('div.frequency span.bar').forEach(function(progress){
-        const span = document.createElement('span');
-        span.className = 'progress';
-        progress.append(span);
-        const percentage = progress.nextElementSibling.innerHTML;
-        progress.querySelector('span.progress').style.width = `${percentage}`       ;
-        
-    })            
-    document.querySelector('div.page1').style.display = "block";
-    function showPage(page){
-        document.querySelectorAll('div.page').forEach(div => {
-            div.style.display = 'none'
-        })                
-        document.querySelector(`#${page}`).style.display = 'block';            
-
     }    
-    function addActiveClass(button){
-        document.querySelectorAll('a.btn').forEach(btn => {
-            btn.classList.remove('active');
-        })
 
-        document.querySelector(`#${button}`).classList.add('active');
-        console.log(button)
-
-    }
-    const primaryTitle = document.querySelector('title').innerHTML
-    document.querySelector('title').innerHTML = `${primaryTitle} (${document.querySelector('a.btn').innerHTML})`
-    document.querySelectorAll('a.btn').forEach(function(btn){        
-        btn.onclick = function(){                                     
-            showPage(this.dataset.page);                              
-            document.querySelector('title').innerHTML = `${primaryTitle} (${this.innerHTML})`                                                               
-            addActiveClass(this.id);
-        }                  
-    })        
 })
+             
+    

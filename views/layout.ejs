@@ -9,10 +9,14 @@
       rel="stylesheet">  
 </head>
 <body>
-    <%- include('partials/navbar') %>
-    <%- include('partials/sidenav') %>
-    <%- body %>
-    <%- include('partials/footer')%>
+    <div id="app-wrapper">
+        <%- include('partials/navbar') %>
+        <%- include('partials/sidenav') %>
+        <div id="container">
+            <%- body %>
+        </div>
+        <%- include('partials/footer')%>
+    </div>
 
     <script src="./js/main.js"></script>
 </body>
