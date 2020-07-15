@@ -17,6 +17,10 @@ body {
   background-color: #f7f7f7;
 }
 
+body.overflow-hidden {
+  overflow: hidden;
+}
+
 div.sidenav-wrapper {
   display: none;
 }
@@ -50,6 +54,8 @@ div#app-wrapper nav#navbar {
   background-color: #3b5998;
   line-height: 55px;
   z-index: 100;
+  -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
 }
 
 div#app-wrapper nav#navbar div.nav-left-menus {
@@ -78,13 +84,14 @@ div#app-wrapper nav#navbar div.nav-left-menus span.hamburger-icon {
       -ms-flex-align: center;
           align-items: center;
   line-height: 30px;
+  font-size: 150%;
 }
 
 div#app-wrapper nav#navbar div.nav-left-menus a.brand-logo {
   display: block;
   color: silver;
   font-weight: 600;
-  font-size: 32px;
+  font-size: 26px;
   text-decoration: none;
 }
 
@@ -328,12 +335,13 @@ div#app-wrapper nav#navbar div.nav-right-menus div.buttons ul.user-menus li div#
   width: 80px;
   background-color: #3b5998;
   margin: 5px;
-  padding: .5em;
+  padding: .3em;
   color: #fff;
   text-align: center;
   border-radius: 3px;
-  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  font-size: 14px;
 }
 
 div#app-wrapper nav#navbar div.nav-right-menus div.buttons ul.user-menus li div#dropdown-wrapper ul li.login-register a.mobile-login-btn span {
@@ -348,12 +356,12 @@ div#app-wrapper nav#navbar div.nav-right-menus div.buttons ul.user-menus li div#
   width: 100px;
   background-color: #3b5998;
   margin: 5px;
-  padding: .5em;
+  padding: .3em;
   color: #fff;
   text-align: center;
   border-radius: 3px;
-  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
 }
 
 div#app-wrapper nav#navbar div.nav-right-menus div.buttons ul.user-menus li div#dropdown-wrapper ul li.login-register a.mobile-register-btn span {
@@ -414,12 +422,29 @@ div#app-wrapper nav#navbar div.nav-right-menus div.buttons ul.user-menus li div#
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-div#app-wrapper nav#navbar div.nav-right-menus div.buttons ul.user-menus li div#dropdown-wrapper ul li.social-proflies a {
-  padding: 0;
-  margin: 10px;
+div#app-wrapper nav#navbar div.nav-right-menus div.buttons ul.user-menus li div#dropdown-wrapper ul li.social-proflies span {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-div#app-wrapper nav#navbar div.nav-right-menus div.buttons ul.user-menus li div#dropdown-wrapper ul li.social-proflies a:hover {
+div#app-wrapper nav#navbar div.nav-right-menus div.buttons ul.user-menus li div#dropdown-wrapper ul li.social-proflies span a {
+  display: block;
+  padding: 0;
+  margin: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+div#app-wrapper nav#navbar div.nav-right-menus div.buttons ul.user-menus li div#dropdown-wrapper ul li.social-proflies span a:hover {
   background-color: transparent;
   color: rgba(0, 0, 0, 0.8);
 }
@@ -499,6 +524,8 @@ div#app-wrapper div#sidenav-wrapper nav.sidenav {
   height: 100%;
   background-color: #f7f7f7;
   margin-left: -300px;
+  -webkit-box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 div#app-wrapper div#sidenav-wrapper nav.sidenav div.header {
@@ -890,6 +917,7 @@ div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.tea
   background-color: rgba(61, 61, 42, 0.2);
   width: 100%;
   padding: 1em;
+  background-color: #fff;
 }
 
 div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.heading {
@@ -905,102 +933,22 @@ div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.tea
 }
 
 div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.heading h1 {
-  color: #fff;
+  color: #333;
 }
 
 div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  background-image: url("../images/web-developer.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer:hover {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
-@-webkit-keyframes rotate-image {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes rotate-image {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div#developer-one div.header div.profile-pic {
+  width: 70%;
+  margin: auto;
   position: relative;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 120px;
-  height: 120px;
-  margin: auto;
-  border: 5px solid cornflowerblue;
-  border-right: 5px solid #fff;
-  border-left: 5px solid #fff;
-  border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div#developer-one div.header div.profile-pic div.img {
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.left-developer-scroll {
   position: absolute;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-image: url("../images/Photo_2.jpg");
-  display: block;
-  margin: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div#developer-two div.header div.profile-pic {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 120px;
-  height: 120px;
-  margin: auto;
-  border: 5px solid cornflowerblue;
-  border-right: 5px solid #fff;
-  border-left: 5px solid #fff;
-  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1010,31 +958,26 @@ div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.tea
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  top: 50%;
+  left: -25px;
+  background-color: #fff;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
 }
 
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div#developer-two div.header div.profile-pic div.img {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-image: url("https://www.jodilogik.com/wordpress/wp-content/uploads/2016/05/people-1.png");
-  display: block;
-  margin: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.left-developer-scroll span {
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.6);
 }
 
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div#developer-three div.header div.profile-pic {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 120px;
-  height: 120px;
-  margin: auto;
-  border: 5px solid cornflowerblue;
-  border-right: 5px solid #fff;
-  border-left: 5px solid #fff;
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.right-developer-scroll {
+  position: absolute;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1044,135 +987,101 @@ div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.tea
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  top: 50%;
+  right: -25px;
+  background-color: #fff;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
 }
 
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div#developer-three div.header div.profile-pic div.img {
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.right-developer-scroll span {
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer-contents::-webkit-scrollbar {
+  visibility: hidden;
+}
+
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer-contents {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-image: url("https://www.jodilogik.com/wordpress/wp-content/uploads/2016/05/people-1.png");
-  display: block;
-  margin: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  display: -ms-grid;
+  display: grid;
+  grid-column-gap: 10px;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  overflow: auto;
+  background-color: #fff;
 }
 
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div#developer-four div.header div.profile-pic {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 120px;
-  height: 120px;
-  margin: auto;
-  border: 5px solid cornflowerblue;
-  border-right: 5px solid #fff;
-  border-left: 5px solid #fff;
-  border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div#developer-four div.header div.profile-pic div.img {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-image: url("https://www.jodilogik.com/wordpress/wp-content/uploads/2016/05/people-1.png");
-  display: block;
-  margin: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div#developer-five div.header div.profile-pic {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 120px;
-  height: 120px;
-  margin: auto;
-  border: 5px solid cornflowerblue;
-  border-right: 5px solid #fff;
-  border-left: 5px solid #fff;
-  border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div#developer-five div.header div.profile-pic div.img {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-image: url("https://www.jodilogik.com/wordpress/wp-content/uploads/2016/05/people-1.png");
-  display: block;
-  margin: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer {
-  margin: 10px;
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer-contents div.developer {
   width: 300px;
-  height: auto;
   padding: 1em;
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: #f7f7f7;
-  -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.6);
-          box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.6);
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
   -webkit-transition: 200ms;
   transition: 200ms;
   border-bottom: 10px solid cornflowerblue;
   border-top: 10px solid cornflowerblue;
-  background-color: orange;
   cursor: auto;
 }
 
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer div.header div.profile-pic img {
-  display: block;
-  width: 100px;
-  height: 100px;
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer-contents div.developer div.header div.profile-pic {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 80px;
+  height: 80px;
   margin: auto;
+  border: 5px solid cornflowerblue;
+  border-right: 5px solid #fff;
+  border-left: 5px solid #fff;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer div.header div.profile-name {
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer-contents div.developer div.header div.profile-pic div.img {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-image: url("https://www.jodilogik.com/wordpress/wp-content/uploads/2016/05/people-1.png");
+  display: block;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer-contents div.developer div.header div.profile-name {
   line-height: 1.5em;
   margin: 20px 0px 10px 0px;
 }
 
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer div.header div.profile-name h2 {
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer-contents div.developer div.header div.profile-name h2 {
   color: teal;
 }
 
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer div.header div.profile-name span {
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer-contents div.developer div.header div.profile-name span {
   color: rgba(0, 0, 0, 0.5);
 }
 
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer div.bio p {
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer-contents div.developer div.bio p {
   color: rgba(0, 0, 0, 0.6);
   font-size: 16px;
 }
 
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer div.social-profiles {
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer-contents div.developer div.social-profiles {
   margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1184,12 +1093,16 @@ div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.tea
           box-sizing: border-box;
 }
 
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer div.social-profiles a {
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer-contents div.developer div.social-profiles a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-right: 10px;
   color: #0c3a91;
-  font-size: 2rem;
+  font-size: 1.5rem;
+}
+
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer-five {
+  margin-right: 16px;
 }
 
 div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact {
@@ -1422,7 +1335,6 @@ div#app-wrapper div#container div#resume div.resume-contents div.header div.soci
       -ms-flex-align: center;
           align-items: center;
   height: 50px;
-  background-color: rgba(0, 0, 0, 0.1);
 }
 
 div#app-wrapper div#container div#resume div.resume-contents div.header div.social-profiles div.profile {
@@ -1446,14 +1358,17 @@ div#app-wrapper div#container div#resume div.resume-contents div.header div.soci
           align-items: center;
   margin: 0px 10px;
   border-radius: 50%;
-  color: rgba(255, 255, 255, 0.7);
+  color: white;
   -webkit-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
   font-size: 1rem;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background-color: rgba(241, 59, 59, 0.9);
 }
 
 div#app-wrapper div#container div#resume div.resume-contents div.header div.social-profiles div.profile a:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #f13b3b;
 }
 
 div#app-wrapper div#container div#resume div.resume-contents div.header div.header-detail {
@@ -1755,11 +1670,11 @@ div#app-wrapper div#container div#resume div.resume-contents div.body div.main d
 div#app-wrapper div#container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.front-end ul li span:nth-child(2) div.frequency span.bar, div#app-wrapper div#container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.back-end ul li span:nth-child(2) div.frequency span.bar, div#app-wrapper div#container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.other ul li span:nth-child(2) div.frequency span.bar {
   display: block;
   width: 100%;
-  height: 10px;
+  height: 6px;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  -webkit-box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
-          box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.5);
   position: relative;
 }
 
@@ -1773,6 +1688,8 @@ div#app-wrapper div#container div#resume div.resume-contents div.body div.main d
   height: 100%;
   background-color: cornflowerblue;
   border-radius: 5px;
+  -webkit-box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.2);
 }
 
 div#app-wrapper div#container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.front-end ul li span:nth-child(2) div.frequency span.percentage, div#app-wrapper div#container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.back-end ul li span:nth-child(2) div.frequency span.percentage, div#app-wrapper div#container div#resume div.resume-contents div.body div.main div.contents div.skills-and-tools div.skills-tools div.other ul li span:nth-child(2) div.frequency span.percentage {
