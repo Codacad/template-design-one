@@ -67,7 +67,6 @@ div#app-wrapper{
         background-color: #3b5998;
         line-height: 55px;      
         z-index: 100;  
-        box-shadow:0px 1px 10px rgba(0,0,0,.5);
         div.nav-left-menus{            
             display: flex;            
             align-items: center;            
@@ -488,12 +487,16 @@ div#app-wrapper{
                     width: 100%;
                     li{
                         a{
-                            display: block;
+                            display: flex;
                             transition: 200ms cubic-bezier(0.23, 1, 0.320, 1);
                             padding: .5em;
                             text-decoration: none;
                             color: rgba(0,0,0,.6);
                             border-radius: 5px;
+                            span:first-child{
+                                width: 20px;                                    
+                                margin-right: 10px;
+                            }
                         }
                         a:hover{
                             background-color: rgba(0,0,0,.05);
@@ -619,14 +622,12 @@ div#app-wrapper{
                 // Showcase
                 div#showcase{
                     width: 100%;
-                    min-height: 100vh;          
-                    background: #0f0c2985;  /* fallback for old browsers */
-                    background: -webkit-linear-gradient(to right, #24243e81, #302b6377, #0f0c2981);  /* Chrome 10-25, Safari 5.1-6 */
-                    background: linear-gradient(to right, #24243e75, #302b6386, rgba(15, 12, 41, 0.486)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                    min-height: 100vh;  
+                    background-color: #fff;                           
                     div.contents{
                         width: 100%;
                         min-height: 100vh;
-                        background-image: url('../images/undraw_web_development_w2vv.svg');
+                        background-image: url('../images/undraw_code_review_l1q9.svg');
                         background-repeat: no-repeat;
                         background-size: cover;
                         background-position: center;
@@ -634,250 +635,254 @@ div#app-wrapper{
                     @media (max-width:850px){                        
                     }                
                 }
-                div#courses{
-                    background-color: #052731ef;
-                    h1{
-                        text-align: center;
-                        font-size: 2rem;
-                        color: rgba(255, 255, 255, 0.76) ;
-                        padding-top: 1em;
-                    }
-                    div.content{
-                        box-sizing: border-box;
-                        display: flex;
-                        margin: auto;     
-                        scroll-behavior: smooth;   
-                        padding: 1em;
-                        justify-content: center;
-                        align-items: center;
-                        flex-wrap: wrap;
-                        div.course{
-                            max-width: 300px;
-                            box-sizing: border-box;            
-                            // border: 1px solid rgba(0,0,0,.1);
-                            margin: 10px;
-                            background-color: rgb(241, 59, 59);
-                            box-shadow: 0px 0px 2px rgba(0,0,0,.5);
-                            border-radius: 5px;
-                            div.logo{
-                                width: 100%;
-                                background-color: #07263a;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                padding: 1em 0;
-                                span{
-                                    font-size: 3rem;
+                // Projects
+                div#projects{
+                    position: relative;
+                    width: 100%;                
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 1em;
+                    padding-bottom: 2em;
+                    background-color:#f7f7f7;                 
+                    div.project-contents{
+                        width: 70%;            
+                        margin: auto;
+                        div.project-heading{
+                            h2{
+                                color: rgba(0,0,0,.8);
+                                font-size: 28px;
+                                font-weight: 400;                    
+                                padding: 1em 0;                                
+                            }            
+                        }
+                        div.projects{
+                            display: grid;                
+                            grid-template-columns: repeat(3, 1fr);
+                            grid-gap:10px;
+                            div.project{
+                                position: relative;
+                                background-color:#fff;
+                                border-top: 5px solid orangered;
+                                box-shadow: 0px 5px 15px rgba(0,0,0,.1),
+                                            0px 0px 1px rgba(0,0,0,.5),
+                                            0px 0px 1px rgba(0,0,0,.5);
+                                // min-height: 300px;
+                                div.header{
+                                    display: none;
                                 }
-                            }
-                
-                            div.course-body{
-                                padding: 1em 1em 0em 1em;
-                
-                                h3{
-                                    margin: 10px 0px;
-                                    color:rgba(255, 255, 255, 0.8);
-                                }
-                                p{
-                                    margin-bottom: 10px;
-                                    font-size: 15px;
-                                    color: rgba(255, 255, 255, 0.7);
-                                }
-                                div.rating{
-                                    span{
-                                        color: yellow;                        
+                                 div.body{                        
+                                    padding: 1em;
+                                    position: relative;                        
+                                    div.title{                        
+                                        h3{
+                                            font-size: 24px;
+                                            font-weight: 400;
+                                            color: rgba(0,0,0,.7);                               
+                                        }
                                     }
-                                    span:last-child{
-                                        color: $colorSix;
+                                    div.text{
+                                        padding: 1em 0em;
+                                    }   
+                                    div.tags{
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        flex-wrap: wrap;
+                                        span{
+                                            font-size: 12px;
+                                            color: cornflowerblue;
+                                            font-weight: 400;
+                                            margin-right:5px;
+                                        }
                                     }
-                                }
-                                a.learn-more{
-                                    display: block;
-                                    padding: .5em;
-                                    background-color: #052731ef;
-                                    margin: 20px 0px;
-                                    text-align: center;
-                                    text-decoration: none;
-                                    color: #fff;
-                                    border-radius: 3px;
-                                }
-                            }
+                                    div.view{
+                                        width: 100%;
+                                        padding: .5em;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        margin-top: 20px;
+                                        a{
+                                            display: block;
+                                            width: 100px;
+                                            text-decoration: none;
+                                            color: #fff;
+                                            background-color: orangered;
+                                            padding: .2em;
+                                            border-radius: 4px;
+                                            box-shadow: 0px 0px 1px rgba(0,0,0,.5),
+                                                        0px 0px 5px rgba(0,0,0,.1),
+                                                        0px 0px 1px rgba(0,0,0,.5);                                                       
+                                            text-align: center;                                
+                                        }
+                                        a:hover{
+                                            background-color: rgba(255, 68, 0, 0.829);
+                                        }
+                                    }
+                                }                  
+                            }           
                         }
-                        @media (max-width:520px){
-                            div.course{
-                                max-width: 100%;
-                                box-sizing: border-box;                            
-                                margin: 10px;
-                                background-color: rgb(241, 59, 59);
-                                box-shadow: 0px 0px 2px rgba(0,0,0,.5);
-                            }
-                        }
-                        div#html div.logo span{
-                            color: rgb(218, 74, 74);
-                        }
-                        div#css div.logo span{
-                            color: orange;
-                        }
-                        div#js div.logo span{
-                            color: yellow;
-                        }
-                        div#nodejs div.logo span{
-                            color: green;
-                        }
-                        div#mongodb div.logo span{
-                            color: rgba(17, 119, 17, 0.527);
-                        }
-                       
                     }
                 }
-                div.team{
-                    box-sizing: border-box;
-                    background-color:rgba(61, 61, 42,.2);
-                    width: 100%;
-                    padding: 1em;
-                    background-color:#fff;
-                    div.heading{
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        h1{
-                            color: #333;
+                // Project Media Query
+                @media (max-width:680px){
+                    div#projects{
+                        position: relative;
+                        width: 100%;                
+                        display: block;                                               
+                        padding-bottom: 2em;                        
+                        div.project-contents{
+                            width: 95%;            
+                            margin: auto;
+                            div.project-heading{
+                                h2{
+                                    color: rgba(0,0,0,.8);
+                                    font-size: 28px;
+                                    font-weight: 400;                    
+                                    padding: 1em 0;                                
+                                }            
+                            }
+                            div.projects{
+                                display: block;                                 
+                                div.project{
+                                    margin-bottom: 10px;                                               
+                                }
+                            }
                         }
                     }
-                    div.developers{
-                        width: 70%;
-                        margin: auto; 
-                        position: relative;                       
-                        div.left-developer-scroll{
-                            position: absolute;
-                            width: 50px;
-                            height: 50px;
-                            border-radius: 50%;
-                            box-shadow: 0px 0px 10px rgba(0,0,0,.1);
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            top: 50%;   
-                            left: -25px;                         
-                            background-color: #fff;
-                            transform: translateY(-50%);
-                            cursor: pointer;
-                            span{
-                                font-size: 2rem;
-                                color:rgba(0,0,0,.6);
+                }
+                // About
+                div#about{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 1em;
+                    background-color: rgba(255, 68, 0, 0.068);
+                    div.content{
+                        width: 60%;
+                        margin-top: auto;
+                        div.header{                                                  
+                            display: flex;                            
+                            div.pro-pic{
+                                box-shadow: 0px 2px 10px rgba(0,0,0,.1);
+                                width: 100px;
+                                height: 100px;
+                                background-image: url("../images/Photo_2.jpg");                                
+                                background-repeat: no-repeat;                                
+                                background-size: cover;
+                                border-radius: 50%;
+                            }
+                            div.name-and-designation{
+                                margin-bottom: 10px;
+                                margin-left: 10px;
+                                display: flex;
+                                align-items: flex-end;
+                                line-height: 1em;
+                                h3{
+                                    color: rgba(0,0,0,.7);
+                                    font-weight: 400;
+                                    font-size: 28px;
+                                }
+                                h5{
+                                    color: rgba(0,0,0,.7);
+                                    font-weight: 400;
+                                    font-size: 16px;
+                                    margin-top: 10px;
+                                }
+                            }                          
+                        }
+                        div.body{   
+                            padding: 1em 0em;                        
+                            div.bio{   
+                                p{
+                                    color: rgba(0,0,0,.7);
+                                    padding: .3em;                                   
+                                }   
+                                a{
+                                    width: 100px;
+                                    text-align: center;
+                                    color: #fff;
+                                    display: block;                                    
+                                    background-color: orangered;
+                                    padding: .4em;
+                                    margin: 20px 0px;
+                                    border-radius: 5px;
+                                    text-decoration: none;
+                                    box-shadow: 0px 0px 1px rgba(0,0,0,.5),
+                                                0px 0px 5px rgba(0,0,0,.1),
+                                                0px 0px 1px rgba(0,0,0,.5);
+                                }    
+                                a:hover{
+                                    background-color: rgba(255, 68, 0, 0.829);
+                                }                      
+                            }
+                            div.tags{
+                                width: 100%;
+                                padding: .5em;
+                                background-color: rgba(0,0,0,.05);
+                                border-radius: 2px;
+                                box-shadow: 0px 0px 1px rgba(0,0,0,.5),
+                                            0px 0px 3px rgba(0,0,0,.1),
+                                            0px 0px 1px rgba(0,0,0,.5);
+                                span{
+                                    color: cornflowerblue;
+                                    margin-right: 10px;    
+                                    font-size: 12px;                                
+                                }
                             }
                         }
-                         div.right-developer-scroll{
-                            position: absolute;
-                            width: 50px;
-                            height: 50px;
-                            border-radius: 50%;
-                            box-shadow: 0px 0px 10px rgba(0,0,0,.1);
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            top: 50%;
-                            right: -25px;                            
-                            background-color: #fff;
-                            transform: translateY(-50%);
-                            cursor: pointer;
-                            span{
-                                font-size: 2rem;
-                                color:rgba(0,0,0,.6);
-                            }
-                        }
-                        div.left-developer-scroll:hover, div.right-developer-scroll:hover{
-                            // background-color: #f7f7f7;                            
-                        }
-                        div.developer-contents::-webkit-scrollbar{
-                            visibility: hidden;
-                        }
-                        div.developer-contents{
-                            box-sizing: border-box;
-                            display: grid;       
-                            grid-column-gap: 10px;
-                            grid-template-columns: repeat(5, 1fr);                                                                                             
-                            overflow: auto;                                                                                                
-                            background-color: #fff;                                
-                        div.developer{
-                            // margin: 10px;                                                                     
-                            width: 300px;
-                            padding: 1em;
-                            border-radius: 5px;
-                            border: 1px solid rgba(0,0,0,.2);
-                            background-color:#f7f7f7;                            
-                            transition: 200ms;
-                            border-bottom: 10px solid cornflowerblue;
-                            border-top: 10px solid cornflowerblue;                                 
-                            cursor: auto;
-                            div.header{
-                                div.profile-pic{
-                                    box-sizing: border-box;
+                    }
+                }         
+                //    About Media Query
+                @media (max-width:680px){
+                    div#about{
+                        display: block;                        
+                        background-color: rgba(255, 68, 0, 0.068);
+                        div.content{
+                            width: 95%;
+                            margin: auto;
+                            div.header{                                                  
+                                display: flex;                            
+                                div.pro-pic{
+                                    box-shadow: 0px 2px 10px rgba(0,0,0,.1);
                                     width: 80px;
                                     height: 80px;
-                                    margin: auto;
-                                    border: 5px solid cornflowerblue;
-                                    border-right: 5px solid #fff;
-                                    border-left: 5px solid #fff;
+                                    background-image: url("../images/Photo_2.jpg");                                
+                                    background-repeat: no-repeat;                                
+                                    background-size: cover;
                                     border-radius: 50%;
+                                }
+                                div.name-and-designation{                                    
+                                    margin-left: 10px;
                                     display: flex;
-                                    justify-content: center;
-                                    align-items: center;
-                                    div.img{
-                                        box-sizing: border-box;
-                                        background-image: url('https://www.jodilogik.com/wordpress/wp-content/uploads/2016/05/people-1.png');
-                                        display:block;   
-                                        margin: auto;
-                                        background-repeat: no-repeat;
-                                        background-size: cover;
-                                        border-radius: 50%;
-                                        width: 60px;
-                                        height: 60px;                    
+                                    align-items: flex-end;
+                                    line-height: 1em;
+                                    h3{
+                                        color: rgba(0,0,0,.7);
+                                        font-weight: 400;
+                                        font-size: 22px;
                                     }
-                                }
-                                div.profile-name{
-                                    line-height: 1.5em;
-                                    margin: 20px 0px 10px 0px;
-                                    h2{
-                                        color: teal;
+                                    h5{
+                                        color: rgba(0,0,0,.7);
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        margin-top: 10px;
                                     }
-                                    span{
-                                        color:$colorFive;
-                                    }
-                                }
+                                }                          
                             }
-                            div.bio{
-                                p{
-                                    color: $colorSix;
-                                    font-size: 16px;
-                                }
-                            }
-                            div.social-profiles{
-                                margin-top: 20px;
-                                display: flex;
-                                justify-content: center;
-                                box-sizing: border-box;
-                                a{
-                                    box-sizing: border-box;
-                                    margin-right: 10px;
-                                    color: rgb(12, 58, 145);
-                                    font-size: 1.5rem;
-                                }
-                            }
-                        }
-                        }
-                        div.developer-five{
-                            margin-right: 16px;
                         }
                     }
                 }
+
+                // Contact
                 div#contact{
                     display: flex;
                     justify-content: center;
                     align-items: center;    
                     width:100%;
                     min-height:100vh;
-                    background-color:$backgroundFive;    
+                    background-color: #f7f7f7;    
                     div.content{
                         box-sizing: border-box;
                         width:75%;
@@ -886,38 +891,44 @@ div#app-wrapper{
                         position: relative;
                         display: flex;
                         justify-content: center;        
-                        align-items: center;
-                        box-shadow: 0px 0px 40px rgba(0,0,0,.1);
+                        align-items: center;                        
                         background-color: rgba(255, 255, 255, .2);
                         height: 500px;
                         border-radius: 5px;
-                        div.contact-detail{
-                            box-shadow: 0px 0px 40px rgba(0,0,0,.1);            
+                        box-shadow: 0px 0px 1px rgba(0,0,0,.5),
+                                    0px 0px 1px rgba(0,0,0,.5),
+                                    0px 0px 1px rgba(0,0,0,.5),;
+                        div.contact-detail{                                       
                             box-sizing: border-box;
-                            padding:1em;
-                            // border-radius: 5px;            
+                            padding:1em;                                      
                             margin-right: auto;
                             height: 100%;
                             position: relative;        
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            background-color: $backgroundFour;
+                            background-color: #f7f7f7;
+                            border-right: 1px solid rgba(0,0,0,.1);
                             width: 50%;
+                            h1{
+                                color: rgba(0,0,0,.6);
+                                font-size: 28px;
+                                font-weight: 500;
+                            }
                             div.address, div.email, div.phone{
                                 margin: 20px 0px;
                                 display:flex;            
                                 strong{
                                     flex: 1;
-                                    color: rgba(226, 220, 220,.8);
+                                    color: rgba(0, 0, 0,.8);
                                     span.icon{                        
                                         margin-right: 10px;
-                                        color: rgba(226, 220, 220,.8);
+                                        color: rgba(0, 0, 0,.8);
                                     }
                                 }
                                 .text{
                                     flex: 1;
-                                    color: rgba(226, 220, 220,.5);                   
+                                    color: rgba(0, 0, 0,.5);                   
                                 }
                                 a.text{
                                     color: cornflowerblue;
@@ -931,76 +942,76 @@ div#app-wrapper{
                             div.heading{
                                 h1{
                                     margin-bottom: 20px;
-                                    color:rgba(255, 255, 255, 0.7);
+                                    color:rgba(0, 0, 0, 0.7);
                                     font-size: 1.5rem;
                                     text-align:center;
                                 }
                             }
-                            div.form-group{
-                                margin:20px 0px;                
-                                div{
-                                    input.form-control{
-                                        box-sizing: border-box;
+                            form{
+                                width: 70%;
+                                margin: auto;
+                                div.form-group{
+                                    margin:20px 0px;                
+                                    div{
+                                        input.form-control{
+                                            box-sizing: border-box;
+                                            border: none;
+                                            outline:none;                        
+                                            background-color: none;
+                                            padding: 10px 10px;
+                                            width: 100%;  
+                                            display: block;                                                                                
+                                            font-size: 110%;
+                                            background-color: rgba(0,0,0,.04);                                        
+                                            border-radius: 5px;
+                                            transition: 200ms ease-in-out;
+                                            color: rgba(0, 0, 0, 0.6);
+                                            border: 1px solid rgba(0,0,0,.1);
+                                            box-shadow: 0px 0px 2px rgba(0,0,0,.5);
+                                        }                                   
+                                    }
+                                    textarea{
+                                        width: 100%;
+                                        display: block;
+                                        margin: 0;
                                         border: none;
-                                        outline:none;                        
-                                        background-color: none;
-                                        padding: 10px 10px;
-                                        width: 100%;  
-                                        display: block;                                                                                
-                                        font-size: 110%;
-                                        background-color: rgba(0,0,0,.05);
                                         border: 2px solid rgba(255, 255, 255, 0.2);
+                                        background-color: rgba(0,0,0,.04);  
+                                        outline: none;
                                         border-radius: 5px;
+                                        color: rgba(0, 0, 0, 0.6);
                                         transition: 200ms ease-in-out;
-                                        color: rgba(255, 255, 255, 0.4);
-                                    }
-                                    input.form-control:focus{
-                                        background-color: rgba(255, 255, 255, 0.05);
-                                    }
+                                        font-size:18px;
+                                        border: 1px solid rgba(0,0,0,.1);
+                                        padding: .5em;
+                                        box-shadow: 0px 0px 2px rgba(0,0,0,.5);
+                                    }                                                                 
                                 }
-                                textarea{
-                                    width: 100%;
-                                    display: block;
-                                    margin: 0;
+                                button{
+                                    padding: .5em 1em;
                                     border: none;
-                                    border: 2px solid rgba(255, 255, 255, 0.2);
-                                    background-color: rgba(0,0,0,.05);
-                                    outline: none;
+                                    background-color: orangered;
+                                    cursor: pointer;
+                                    color: rgba(255, 255, 255, 1);                
+                                    display: block;
                                     border-radius: 5px;
-                                    color: rgba(255, 255, 255, 0.4);
-                                    transition: 200ms ease-in-out;
-                                    font-size:18px;
+                                    margin-left: auto;
+                                    font-size: 18px;
+                                    transition: 200ms ease-in-out;                
+                                    box-shadow: 0px 0px 1px rgba(0,0,0,.5),
+                                                0px 0px 3px rgba(0,0,0,.1),
+                                                0px 0px 1px rgba(0,0,0,.5);
                                 }
-                                textarea:focus{
-                                    background-color: rgba(255, 255, 255, 0.05);
+                                button:hover{
+                                    background-color: rgba(255, 68, 0, 0.884);
                                 }
-                                label{                    
-                                    color: rgba(255, 255, 255, 0.76);
-                                }
-                            }
-                            button{
-                                padding: .5em 1em;
-                                border: none;
-                                // background-color:$backgroundOne;                
-                                background-color: rgba(241, 59, 59, 0.849);
-                                cursor: pointer;
-                                color: rgba(255, 255, 255, 0.76);                
-                                display: block;
-                                border-radius: 5px;
-                                margin-left: auto;
-                                font-size: 18px;
-                                transition: 200ms ease-in-out;                
-                            }
-                            button:hover{
-                                // background-color: $backgroundTwo;
-                                background-color: rgba(241, 59, 59, 1);
                             }
                         }
                     }
-                    @media (max-width:780px){
+                    @media (max-width:780px){                                                                     
                         div.content{
                             box-sizing: border-box;
-                            width:100%;
+                            width:95%;
                             margin: auto;
                             border: 1px solid rgba(0,0,0,.1);
                             position: relative;
@@ -1011,6 +1022,7 @@ div#app-wrapper{
                             background-color: rgba(255, 255, 255, .2);
                             height:100%;
                             border-radius: 5px;            
+                            margin: 20px 0px;
                             div.contact-detail{
                                 width: 100%;               
                             }
@@ -1019,7 +1031,26 @@ div#app-wrapper{
                                 div.heading{
                                     h1{
                                         text-align: center;
+                                        position: relative;     
+                                        padding: 20px 0px;                                   
                                     }
+                                    h1::after{
+                                        content: "";
+                                        display: block;
+                                        width: 180px;
+                                        position: absolute;
+                                        left: 50%;
+                                        transform: translateX(-50%);
+                                        background-origin: 0;
+                                        height: 5px;
+                                        background-color: rgba(0,0,0,.6);
+                                        margin: auto;
+                                        bottom: 10px;
+                                    }
+
+                                }
+                                form{                                  
+                                    width: 100%;
                                 }
                             }
                         }
@@ -1661,4 +1692,5 @@ div#app-wrapper{
             }
         }
     }
+    // Container End    
 }

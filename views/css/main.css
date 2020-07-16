@@ -54,8 +54,6 @@ div#app-wrapper nav#navbar {
   background-color: #3b5998;
   line-height: 55px;
   z-index: 100;
-  -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
 }
 
 div#app-wrapper nav#navbar div.nav-left-menus {
@@ -616,13 +614,20 @@ div#app-wrapper div#sidenav-wrapper nav.sidenav div.sidenav-contents ul {
 }
 
 div#app-wrapper div#sidenav-wrapper nav.sidenav div.sidenav-contents ul li a {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-transition: 200ms cubic-bezier(0.23, 1, 0.32, 1);
   transition: 200ms cubic-bezier(0.23, 1, 0.32, 1);
   padding: .5em;
   text-decoration: none;
   color: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
+}
+
+div#app-wrapper div#sidenav-wrapper nav.sidenav div.sidenav-contents ul li a span:first-child {
+  width: 20px;
+  margin-right: 10px;
 }
 
 div#app-wrapper div#sidenav-wrapper nav.sidenav div.sidenav-contents ul li a:hover {
@@ -768,43 +773,86 @@ div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.und
 div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#showcase {
   width: 100%;
   min-height: 100vh;
-  background: #0f0c2985;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#24243e75), color-stop(#302b6386), to(rgba(15, 12, 41, 0.486)));
-  background: linear-gradient(to right, #24243e75, #302b6386, rgba(15, 12, 41, 0.486));
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: #fff;
 }
 
 div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#showcase div.contents {
   width: 100%;
   min-height: 100vh;
-  background-image: url("../images/undraw_web_development_w2vv.svg");
+  background-image: url("../images/undraw_code_review_l1q9.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#courses {
-  background-color: #052731ef;
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#courses h1 {
-  text-align: center;
-  font-size: 2rem;
-  color: rgba(255, 255, 255, 0.76);
-  padding-top: 1em;
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#courses div.content {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#projects {
+  position: relative;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: auto;
-  scroll-behavior: smooth;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 1em;
+  padding-bottom: 2em;
+  background-color: #f7f7f7;
+}
+
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#projects div.project-contents {
+  width: 70%;
+  margin: auto;
+}
+
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#projects div.project-contents div.project-heading h2 {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 28px;
+  font-weight: 400;
+  padding: 1em 0;
+}
+
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#projects div.project-contents div.projects {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#projects div.project-contents div.projects div.project {
+  position: relative;
+  background-color: #fff;
+  border-top: 5px solid orangered;
+  -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1), 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1), 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, 0.5);
+}
+
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#projects div.project-contents div.projects div.project div.header {
+  display: none;
+}
+
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#projects div.project-contents div.projects div.project div.body {
+  padding: 1em;
+  position: relative;
+}
+
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#projects div.project-contents div.projects div.project div.body div.title h3 {
+  font-size: 24px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#projects div.project-contents div.projects div.project div.body div.text {
+  padding: 1em 0em;
+}
+
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#projects div.project-contents div.projects div.project div.body div.tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -815,20 +863,16 @@ div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#cou
       flex-wrap: wrap;
 }
 
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#courses div.content div.course {
-  max-width: 300px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 10px;
-  background-color: #f13b3b;
-  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#projects div.project-contents div.projects div.project div.body div.tags span {
+  font-size: 12px;
+  color: cornflowerblue;
+  font-weight: 400;
+  margin-right: 5px;
 }
 
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#courses div.content div.course div.logo {
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#projects div.project-contents div.projects div.project div.body div.view {
   width: 100%;
-  background-color: #07263a;
+  padding: .5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -838,271 +882,199 @@ div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#cou
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1em 0;
+  margin-top: 20px;
 }
 
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#courses div.content div.course div.logo span {
-  font-size: 3rem;
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#courses div.content div.course div.course-body {
-  padding: 1em 1em 0em 1em;
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#courses div.content div.course div.course-body h3 {
-  margin: 10px 0px;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#courses div.content div.course div.course-body p {
-  margin-bottom: 10px;
-  font-size: 15px;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#courses div.content div.course div.course-body div.rating span {
-  color: yellow;
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#courses div.content div.course div.course-body div.rating span:last-child {
-  color: rgba(0, 0, 0, 0.6);
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#courses div.content div.course div.course-body a.learn-more {
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#projects div.project-contents div.projects div.project div.body div.view a {
   display: block;
-  padding: .5em;
-  background-color: #052731ef;
-  margin: 20px 0px;
-  text-align: center;
+  width: 100px;
   text-decoration: none;
   color: #fff;
-  border-radius: 3px;
+  background-color: orangered;
+  padding: .2em;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 0px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 0px 1px rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 
-@media (max-width: 520px) {
-  div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#courses div.content div.course {
-    max-width: 100%;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    margin: 10px;
-    background-color: #f13b3b;
-    -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
-            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#projects div.project-contents div.projects div.project div.body div.view a:hover {
+  background-color: rgba(255, 68, 0, 0.829);
+}
+
+@media (max-width: 680px) {
+  div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#projects {
+    position: relative;
+    width: 100%;
+    display: block;
+    padding-bottom: 2em;
+  }
+  div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#projects div.project-contents {
+    width: 95%;
+    margin: auto;
+  }
+  div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#projects div.project-contents div.project-heading h2 {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 28px;
+    font-weight: 400;
+    padding: 1em 0;
+  }
+  div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#projects div.project-contents div.projects {
+    display: block;
+  }
+  div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#projects div.project-contents div.projects div.project {
+    margin-bottom: 10px;
   }
 }
 
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#courses div.content div#html div.logo span {
-  color: #da4a4a;
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#courses div.content div#css div.logo span {
-  color: orange;
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#courses div.content div#js div.logo span {
-  color: yellow;
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#courses div.content div#nodejs div.logo span {
-  color: green;
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#courses div.content div#mongodb div.logo span {
-  color: rgba(17, 119, 17, 0.527);
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-color: rgba(61, 61, 42, 0.2);
-  width: 100%;
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 1em;
-  background-color: #fff;
+  background-color: rgba(255, 68, 0, 0.068);
 }
 
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.heading {
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#about div.content {
+  width: 60%;
+  margin-top: auto;
+}
+
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#about div.content div.header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.heading h1 {
-  color: #333;
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers {
-  width: 70%;
-  margin: auto;
-  position: relative;
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.left-developer-scroll {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  top: 50%;
-  left: -25px;
-  background-color: #fff;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  cursor: pointer;
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.left-developer-scroll span {
-  font-size: 2rem;
-  color: rgba(0, 0, 0, 0.6);
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.right-developer-scroll {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  top: 50%;
-  right: -25px;
-  background-color: #fff;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  cursor: pointer;
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.right-developer-scroll span {
-  font-size: 2rem;
-  color: rgba(0, 0, 0, 0.6);
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer-contents::-webkit-scrollbar {
-  visibility: hidden;
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer-contents {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -ms-grid;
-  display: grid;
-  grid-column-gap: 10px;
-  -ms-grid-columns: (1fr)[5];
-      grid-template-columns: repeat(5, 1fr);
-  overflow: auto;
-  background-color: #fff;
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer-contents div.developer {
-  width: 300px;
-  padding: 1em;
-  border-radius: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  background-color: #f7f7f7;
-  -webkit-transition: 200ms;
-  transition: 200ms;
-  border-bottom: 10px solid cornflowerblue;
-  border-top: 10px solid cornflowerblue;
-  cursor: auto;
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer-contents div.developer div.header div.profile-pic {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 80px;
-  height: 80px;
-  margin: auto;
-  border: 5px solid cornflowerblue;
-  border-right: 5px solid #fff;
-  border-left: 5px solid #fff;
-  border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer-contents div.developer div.header div.profile-pic div.img {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-image: url("https://www.jodilogik.com/wordpress/wp-content/uploads/2016/05/people-1.png");
-  display: block;
-  margin: auto;
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#about div.content div.header div.pro-pic {
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100px;
+  height: 100px;
+  background-image: url("../images/Photo_2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
 }
 
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer-contents div.developer div.header div.profile-name {
-  line-height: 1.5em;
-  margin: 20px 0px 10px 0px;
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer-contents div.developer div.header div.profile-name h2 {
-  color: teal;
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer-contents div.developer div.header div.profile-name span {
-  color: rgba(0, 0, 0, 0.5);
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer-contents div.developer div.bio p {
-  color: rgba(0, 0, 0, 0.6);
-  font-size: 16px;
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer-contents div.developer div.social-profiles {
-  margin-top: 20px;
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#about div.content div.header div.name-and-designation {
+  margin-bottom: 10px;
+  margin-left: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  line-height: 1em;
 }
 
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer-contents div.developer div.social-profiles a {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#about div.content div.header div.name-and-designation h3 {
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 400;
+  font-size: 28px;
+}
+
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#about div.content div.header div.name-and-designation h5 {
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#about div.content div.body {
+  padding: 1em 0em;
+}
+
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#about div.content div.body div.bio p {
+  color: rgba(0, 0, 0, 0.7);
+  padding: .3em;
+}
+
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#about div.content div.body div.bio a {
+  width: 100px;
+  text-align: center;
+  color: #fff;
+  display: block;
+  background-color: orangered;
+  padding: .4em;
+  margin: 20px 0px;
+  border-radius: 5px;
+  text-decoration: none;
+  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 0px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 0px 1px rgba(0, 0, 0, 0.5);
+}
+
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#about div.content div.body div.bio a:hover {
+  background-color: rgba(255, 68, 0, 0.829);
+}
+
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#about div.content div.body div.tags {
+  width: 100%;
+  padding: .5em;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 2px;
+  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 3px rgba(0, 0, 0, 0.1), 0px 0px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 3px rgba(0, 0, 0, 0.1), 0px 0px 1px rgba(0, 0, 0, 0.5);
+}
+
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#about div.content div.body div.tags span {
+  color: cornflowerblue;
   margin-right: 10px;
-  color: #0c3a91;
-  font-size: 1.5rem;
+  font-size: 12px;
 }
 
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div.team div.developers div.developer-five {
-  margin-right: 16px;
+@media (max-width: 680px) {
+  div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#about {
+    display: block;
+    background-color: rgba(255, 68, 0, 0.068);
+  }
+  div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#about div.content {
+    width: 95%;
+    margin: auto;
+  }
+  div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#about div.content div.header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#about div.content div.header div.pro-pic {
+    -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 80px;
+    height: 80px;
+    background-image: url("../images/Photo_2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+  }
+  div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#about div.content div.header div.name-and-designation {
+    margin-left: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    line-height: 1em;
+  }
+  div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#about div.content div.header div.name-and-designation h3 {
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 400;
+    font-size: 22px;
+  }
+  div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#about div.content div.header div.name-and-designation h5 {
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 10px;
+  }
 }
 
 div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact {
@@ -1117,7 +1089,7 @@ div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#con
           align-items: center;
   width: 100%;
   min-height: 100vh;
-  background-color: #0c2a42;
+  background-color: #f7f7f7;
 }
 
 div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content {
@@ -1136,16 +1108,14 @@ div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#con
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.2);
   height: 500px;
   border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, 0.5);
 }
 
 div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.contact-detail {
-  -webkit-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 1em;
@@ -1161,8 +1131,15 @@ div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#con
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #1c415f;
+  background-color: #f7f7f7;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
   width: 50%;
+}
+
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.contact-detail h1 {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 28px;
+  font-weight: 500;
 }
 
 div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.contact-detail div.address, div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.contact-detail div.email, div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.contact-detail div.phone {
@@ -1176,19 +1153,19 @@ div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#con
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  color: rgba(226, 220, 220, 0.8);
+  color: rgba(0, 0, 0, 0.8);
 }
 
 div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.contact-detail div.address strong span.icon, div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.contact-detail div.email strong span.icon, div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.contact-detail div.phone strong span.icon {
   margin-right: 10px;
-  color: rgba(226, 220, 220, 0.8);
+  color: rgba(0, 0, 0, 0.8);
 }
 
 div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.contact-detail div.address .text, div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.contact-detail div.email .text, div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.contact-detail div.phone .text {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  color: rgba(226, 220, 220, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.contact-detail div.address a.text, div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.contact-detail div.email a.text, div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.contact-detail div.phone a.text {
@@ -1204,16 +1181,21 @@ div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#con
 
 div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.message div.heading h1 {
   margin-bottom: 20px;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 0, 0, 0.7);
   font-size: 1.5rem;
   text-align: center;
 }
 
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.message div.form-group {
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.message form {
+  width: 70%;
+  margin: auto;
+}
+
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.message form div.form-group {
   margin: 20px 0px;
 }
 
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.message div.form-group div input.form-control {
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.message form div.form-group div input.form-control {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: none;
@@ -1223,64 +1205,60 @@ div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#con
   width: 100%;
   display: block;
   font-size: 110%;
-  background-color: rgba(0, 0, 0, 0.05);
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.04);
   border-radius: 5px;
   -webkit-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
 }
 
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.message div.form-group div input.form-control:focus {
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.message div.form-group textarea {
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.message form div.form-group textarea {
   width: 100%;
   display: block;
   margin: 0;
   border: none;
   border: 2px solid rgba(255, 255, 255, 0.2);
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.04);
   outline: none;
   border-radius: 5px;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(0, 0, 0, 0.6);
   -webkit-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
   font-size: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: .5em;
+  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
 }
 
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.message div.form-group textarea:focus {
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.message div.form-group label {
-  color: rgba(255, 255, 255, 0.76);
-}
-
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.message button {
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.message form button {
   padding: .5em 1em;
   border: none;
-  background-color: rgba(241, 59, 59, 0.849);
+  background-color: orangered;
   cursor: pointer;
-  color: rgba(255, 255, 255, 0.76);
+  color: white;
   display: block;
   border-radius: 5px;
   margin-left: auto;
   font-size: 18px;
   -webkit-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
+  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 3px rgba(0, 0, 0, 0.1), 0px 0px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 3px rgba(0, 0, 0, 0.1), 0px 0px 1px rgba(0, 0, 0, 0.5);
 }
 
-div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.message button:hover {
-  background-color: #f13b3b;
+div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.message form button:hover {
+  background-color: rgba(255, 68, 0, 0.884);
 }
 
 @media (max-width: 780px) {
   div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    width: 100%;
+    width: 95%;
     margin: auto;
     border: 1px solid rgba(0, 0, 0, 0.1);
     position: relative;
@@ -1296,6 +1274,7 @@ div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#con
     background-color: rgba(255, 255, 255, 0.2);
     height: 100%;
     border-radius: 5px;
+    margin: 20px 0px;
   }
   div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.contact-detail {
     width: 100%;
@@ -1305,6 +1284,25 @@ div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#con
   }
   div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.message div.heading h1 {
     text-align: center;
+    position: relative;
+    padding: 20px 0px;
+  }
+  div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.message div.heading h1::after {
+    content: "";
+    display: block;
+    width: 180px;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    background-origin: 0;
+    height: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: auto;
+    bottom: 10px;
+  }
+  div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.message form {
+    width: 100%;
   }
 }
 

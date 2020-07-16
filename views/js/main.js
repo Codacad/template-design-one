@@ -41,16 +41,7 @@ document.addEventListener('DOMContentLoaded', function(){
             e.preventDefault()
             underDev.classList.remove('show-under-development')
             label.classList.remove('show-label')
-        })    
-
-        const devContents = document.querySelector('div.developer-contents');
-        const developer = devContents.querySelector('div#developer-one');
-        const devContentsCords = devContents.getBoundingClientRect();
-        const developersCords = developer.getBoundingClientRect();
-        console.log(devContentsCords);
-        devContents.onscroll = function(e){
-            
-        }
+        })            
     }    
 
     if(title == "Resume"){
