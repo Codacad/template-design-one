@@ -51,9 +51,11 @@ div#app-wrapper nav#navbar {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  background-color: #3b5998;
+  background-color: #f7f7f7;
   line-height: 55px;
   z-index: 100;
+  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 2px rgba(0, 0, 0, 0.1), 0px 0px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 2px rgba(0, 0, 0, 0.1), 0px 0px 1px rgba(0, 0, 0, 0.5);
 }
 
 div#app-wrapper nav#navbar div.nav-left-menus {
@@ -68,7 +70,7 @@ div#app-wrapper nav#navbar div.nav-left-menus {
 div#app-wrapper nav#navbar div.nav-left-menus span.hamburger-icon {
   display: block;
   margin: 0px 10px;
-  color: silver;
+  color: rgba(0, 0, 0, 0.6);
   cursor: pointer;
   width: 30px;
   height: 30px;
@@ -87,7 +89,7 @@ div#app-wrapper nav#navbar div.nav-left-menus span.hamburger-icon {
 
 div#app-wrapper nav#navbar div.nav-left-menus a.brand-logo {
   display: block;
-  color: silver;
+  color: rgba(0, 0, 0, 0.6);
   font-weight: 600;
   font-size: 26px;
   text-decoration: none;
@@ -131,11 +133,12 @@ div#app-wrapper nav#navbar div.nav-right-menus div.buttons div.search {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: silver;
   width: 100%;
   height: 40px;
-  border-radius: 4px;
+  border-radius: 2px;
   margin-right: 20px;
+  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, 0.5);
 }
 
 div#app-wrapper nav#navbar div.nav-right-menus div.buttons div.search input {
@@ -146,7 +149,6 @@ div#app-wrapper nav#navbar div.nav-right-menus div.buttons div.search input {
   padding: .5em 1em;
   width: 100%;
   height: 100%;
-  background-color: silver;
   border-radius: 4px;
   font-size: 18px;
   color: rgba(0, 0, 0, 0.6);
@@ -172,6 +174,7 @@ div#app-wrapper nav#navbar div.nav-right-menus div.buttons div.search div.search
       -ms-flex-align: center;
           align-items: center;
   padding: .5em;
+  color: rgba(0, 0, 0, 0.6);
   cursor: pointer;
 }
 
@@ -191,7 +194,7 @@ div#app-wrapper nav#navbar div.nav-right-menus div.buttons a.login {
   right: 50px;
   margin-right: 20px;
   text-align: center;
-  color: #fff;
+  color: #333;
 }
 
 div#app-wrapper nav#navbar div.nav-right-menus div.buttons a.login:hover {
@@ -205,6 +208,7 @@ div#app-wrapper nav#navbar div.nav-right-menus div.buttons ul.user-menus {
   display: flex;
   margin-right: 0px;
   justify-self: end;
+  margin-left: 20px;
 }
 
 div#app-wrapper nav#navbar div.nav-right-menus div.buttons ul.user-menus li.user a {
@@ -222,7 +226,7 @@ div#app-wrapper nav#navbar div.nav-right-menus div.buttons ul.user-menus li.user
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  color: silver;
+  color: rgba(0, 0, 0, 0.6);
   text-decoration: none;
   padding: 0em .5em;
   border-radius: 4px;
@@ -238,7 +242,7 @@ div#app-wrapper nav#navbar div.nav-right-menus div.buttons ul.user-menus li.user
 
 div#app-wrapper nav#navbar div.nav-right-menus div.buttons ul.user-menus li.user a a {
   text-decoration: none;
-  color: silver;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 div#app-wrapper nav#navbar div.nav-right-menus div.buttons ul.user-menus li.user a:hover {
@@ -254,7 +258,7 @@ div#app-wrapper nav#navbar div.nav-right-menus div.buttons ul.user-menus li span
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: silver;
+  color: rgba(0, 0, 0, 0.6);
   font-size: 22px;
   cursor: pointer;
   width: 30px;
@@ -265,18 +269,18 @@ div#app-wrapper nav#navbar div.nav-right-menus div.buttons ul.user-menus li span
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
+  position: absolute;
   top: 50%;
   right: 5px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   border-radius: 50%;
-  background-color: rgba(247, 247, 247, 0.173);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 div#app-wrapper nav#navbar div.nav-right-menus div.buttons ul.user-menus li span.caret:hover {
-  color: #cecbcb;
-  background-color: rgba(247, 247, 247, 0.273);
+  color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.07);
 }
 
 div#app-wrapper nav#navbar div.nav-right-menus div.buttons ul.user-menus li div#dropdown-wrapper {
@@ -1020,6 +1024,12 @@ div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#abo
   padding: .5em;
   background-color: rgba(0, 0, 0, 0.05);
   border-radius: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 3px rgba(0, 0, 0, 0.1), 0px 0px 1px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 3px rgba(0, 0, 0, 0.1), 0px 0px 1px rgba(0, 0, 0, 0.5);
 }
@@ -1089,7 +1099,7 @@ div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#con
           align-items: center;
   width: 100%;
   min-height: 100vh;
-  background-color: #f7f7f7;
+  background-color: #fff;
 }
 
 div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content {
@@ -1108,11 +1118,11 @@ div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#con
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #f7f7f7;
   height: 500px;
   border-radius: 5px;
-  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 
 div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.contact-detail {
@@ -1131,7 +1141,6 @@ div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#con
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #f7f7f7;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   width: 50%;
 }
