@@ -22,7 +22,6 @@ $backgroundSix:rgb(5, 53, 92);
     padding:0;
     margin: 0;
     box-sizing: border-box;
-    // transition: 500ms cubic-bezier(.023, 1, .20, 1);
 }
 html{
     scroll-behavior: smooth;
@@ -716,6 +715,7 @@ div#app-wrapper{
                                             color: #fff;
                                             background-color: orangered;
                                             padding: .2em;
+                                            transition: 200ms ease-in-out;
                                             border-radius: 4px;
                                             box-shadow: 0px 0px 1px rgba(0,0,0,.5),
                                                         0px 0px 5px rgba(0,0,0,.1),
@@ -814,7 +814,9 @@ div#app-wrapper{
                                     padding: .4em;
                                     margin: 20px 0px;
                                     border-radius: 5px;
+                                    border: none;                                    
                                     text-decoration: none;
+                                    transition: 200ms ease-in-out;
                                     box-shadow: 0px 0px 1px rgba(0,0,0,.5),
                                                 0px 0px 5px rgba(0,0,0,.1),
                                                 0px 0px 1px rgba(0,0,0,.5);
@@ -1003,13 +1005,14 @@ div#app-wrapper{
                                     cursor: pointer;
                                     color: rgba(255, 255, 255, 1);                
                                     display: block;
-                                    border-radius: 5px;
+                                    border-radius: 3px;
                                     margin-left: auto;
                                     font-size: 18px;
                                     transition: 200ms ease-in-out;                
                                     box-shadow: 0px 0px 1px rgba(0,0,0,.5),
-                                                0px 0px 3px rgba(0,0,0,.1),
-                                                0px 0px 1px rgba(0,0,0,.5);
+                                                0px 0px 1px rgba(0,0,0,.1),
+                                                0px 0px 1px rgba(0,0,0,.5),
+                                                0px 0px 3px rgba(0,0,0,.1);
                                 }
                                 button:hover{
                                     background-color: rgba(255, 68, 0, 0.884);

@@ -50,9 +50,11 @@ document.addEventListener('DOMContentLoaded', function(){
             const resumeCords = resume.getBoundingClientRect();
             const navbar = document.querySelector("nav#navbar");        
             if(resumeCords.y <= -10){
-                navbar.style.boxShadow = "0px 1px 10px rgba(0,0,0,.5)";
+                navbar.style.boxShadow = "0px 0px 1px rgba(0,0,0,.5),0px 0px 1px rgba(0,0,0,.5),0px 0px 1px rgba(0,0,0,.5)";
+                navbar.style.backgroundColor = "#fff";
             }else if(resumeCords.y == 55){
                 navbar.style.boxShadow = "none";
+                navbar.style.backgroundColor = "#f7f7f7";
             }
         }
     }   

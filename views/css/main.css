@@ -896,6 +896,8 @@ div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#pro
   color: #fff;
   background-color: orangered;
   padding: .2em;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
   border-radius: 4px;
   -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 0px 1px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 0px 1px rgba(0, 0, 0, 0.5);
@@ -1010,7 +1012,10 @@ div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#abo
   padding: .4em;
   margin: 20px 0px;
   border-radius: 5px;
+  border: none;
   text-decoration: none;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
   -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 0px 1px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 0px 1px rgba(0, 0, 0, 0.5);
 }
@@ -1252,13 +1257,13 @@ div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#con
   cursor: pointer;
   color: white;
   display: block;
-  border-radius: 5px;
+  border-radius: 3px;
   margin-left: auto;
   font-size: 18px;
   -webkit-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
-  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 3px rgba(0, 0, 0, 0.1), 0px 0px 1px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 3px rgba(0, 0, 0, 0.1), 0px 0px 1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, 0.1), 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, 0.1), 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 3px rgba(0, 0, 0, 0.1);
 }
 
 div#app-wrapper div#container div#homepage-wrapper div.homepage-contents div#contact div.content div.message form button:hover {
