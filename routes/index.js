@@ -1,5 +1,6 @@
 const express = require('express');
 const Router = express.Router();
+const Messages = require('../models/messages');
 
 Router.get('/', (req, res) => {
     res.render('index', {
@@ -24,4 +25,25 @@ Router.get('/singlepageapp', (req, res) => {
     res.render('singlepageapp', {title:"Single Page App", AuthUser:req.user});
 })
 
+Router.post('/message', (req, res) => {
+    const {name, email, text} = req.body;
+    const message = {
+        name, 
+        email, 
+        text
+    }    
+
+    
+    const newMessage = new Messages(message);
+
+    newMessage.save((err) => {
+        if(err) {
+            return err;
+        }else{
+            console.log('Message recieved');
+        }        
+
+    })
+    
+})
 module.exports =  Router;

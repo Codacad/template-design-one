@@ -961,6 +961,28 @@ div#app-wrapper{
                             form{
                                 width: 70%;
                                 margin: auto;
+                            
+                                div.success{
+                                    text-align: center;
+                                    width: 100%;                                                                        
+                                    background-color: rgba(255, 68, 0, 0.058);
+                                    color:  rgba(255, 68, 0, 0.458);                                    
+                                    border:none;                                
+                                    border-radius: 5px;
+                                    visibility: hidden;
+                                    opacity: 0;
+                                    height: 0px;                                    
+                                    overflow: hidden;
+                                    transition: 200ms ease-in-out;                                    
+                                }                                
+                                div.success.show-success{
+                                    border: 1px solid  rgba(255, 68, 0, 0.458);;
+                                    height: auto;
+                                    visibility: visible;
+                                    overflow: auto;
+                                    opacity: 1;
+                                    padding: .5em;
+                                }
                                 div.form-group{
                                     margin:20px 0px;                
                                     div{
