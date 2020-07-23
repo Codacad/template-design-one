@@ -39,7 +39,7 @@ Router.post('/message', (req, res) => {
     newMessage.save((err) => {
         if(err) {
             return err;
-        }else{
+        }else{            
             console.log('Message recieved');
         }        
 

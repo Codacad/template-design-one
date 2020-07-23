@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 function sendMessage(e) {    
     e.preventDefault();        
-    let URL = "http://www.codacad.com/message" || 'http://localhost:5000/message';
+    let URL = "http://www.codacad.com/message";
     let nameInput = document.querySelector('#name')
     let emailInput = document.querySelector('#email')
     let textInput = document.querySelector('#text')    
@@ -23,6 +23,7 @@ function sendMessage(e) {
     }else{
         fetch(URL, {
             method:'POST',
+            mode:"no-cors",
             headers:{
                 "Content-Type":"application/json"
             },
