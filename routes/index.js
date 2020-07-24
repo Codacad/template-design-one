@@ -25,25 +25,24 @@ Router.get('/singlepageapp', (req, res) => {
     res.render('singlepageapp', {title:"Single Page App", AuthUser:req.user});
 })
 
+Router.get('/message', (req, res) => {
+    Messages.find({}, function(err, messages){
+        if(err){
+            return err
+        }
+        res.send(messages);
+    })
+})
 Router.post('/message', (req, res) => {
     const {name, email, text} = req.body;
     const message = {
         name, 
         email, 
         text
-    }    
-
-    
+    }            
     const newMessage = new Messages(message);
-
-    newMessage.save((err) => {
-        if(err) {
-            return err;
-        }else{            
-            console.log('Message recieved');
-        }        
-
-    })
-    
+    newMessage.save().then(msg => {
+        res.send(msg);
+    }).catch(err => console.log(err));
 })
 module.exports =  Router;

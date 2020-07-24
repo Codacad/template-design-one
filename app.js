@@ -13,11 +13,10 @@ app.use(expressLayout);
 app.use(express.static('views'));
 
 // DB Connection
-mongoose.connect(process.env.mongo_URI || MONGODB_URI, {
+mongoose.connect(process.env.MONGODB_URI || process.env.mongo_URI, {
     useNewUrlParser:true,
     useUnifiedTopology:true
 })
-
 const database = mongoose.connection;
 database.once('open', () => {
     console.log('Connected to the database')

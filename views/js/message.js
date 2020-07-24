@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function sendMessage(e) {    
     e.preventDefault();        
     let URL = "http://www.codacad.com/message";
+    let localURL = "http://localhost:5000/message";
     let nameInput = document.querySelector('#name')
     let emailInput = document.querySelector('#email')
     let textInput = document.querySelector('#text')    
@@ -16,23 +17,23 @@ function sendMessage(e) {
         name,
         email,
         text            
-    }
-
+    }    
     if(!nameInput.value || !emailInput.value || !textInput.value){
         console.log('Please fill all fields')
     }else{
-        fetch(URL, {
-            method:'POST',
-            mode:"no-cors",
+        fetch(localURL, {
+            method:'POST',            
             headers:{
                 "Content-Type":"application/json"
             },
             body:JSON.stringify(message)
-        })
-        .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(error =>  console.log(error));
-
+        }).then(response => {
+            return response.json()
+        }).then(data => {
+            console.log(data)
+        }).catch(error =>  {
+            console.log(error)
+        });
         document.querySelector('form div.success').classList.add('show-success')        
         nameInput.value = "";
         emailInput.value= ""
