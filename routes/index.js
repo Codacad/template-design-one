@@ -43,7 +43,7 @@ Router.post('/message', (req, res) => {
     console.log(message)
     const newMessage = new Messages(message);
     newMessage.save().then(msg => {
-        res.send(msg);
+        res.json(msg);
     }).catch(err => console.log(err));
 })
 module.exports =  Router;
