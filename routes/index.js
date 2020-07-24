@@ -43,8 +43,8 @@ Router.post('/message', (req, res) => {
     console.log(message)
     const newMessage = new Messages(message);
     newMessage.save().then(msg => {
-        res.header({"Content-Type":"application/json"});
-        res.json(msg);
+        res.setHeader('Content-Type', 'application/json');
+        res.send(msg);        
     }).catch(err => console.log(err));
 })
 module.exports =  Router;
