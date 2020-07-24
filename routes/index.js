@@ -30,7 +30,7 @@ Router.get('/api/message', (req, res) => {
         if(err){
             return err
         }
-        res.send(messages);
+        res.json(messages);
     })
 })
 Router.post('/message', (req, res) => {
