@@ -12,7 +12,7 @@ function sendMessage(e) {
     }
     console.log(URL)
 
-    // let localURL = "http://localhost:5000/message";
+    let localURL = "http://localhost:5000/message";
     let nameInput = document.querySelector('#name')
     let emailInput = document.querySelector('#email')
     let textInput = document.querySelector('#text')    
@@ -31,7 +31,7 @@ function sendMessage(e) {
         fail.querySelector('span').textContent = "Please fill all fields..."
 
     }else{
-        fetch(URL, {
+        fetch(localURL, {
             method:'POST',            
             headers:{
                 "Content-Type":"application/json"
