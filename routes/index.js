@@ -25,11 +25,12 @@ Router.get('/singlepageapp', (req, res) => {
     res.render('singlepageapp', {title:"Single Page App", AuthUser:req.user});
 })
 
-Router.get('/api/message', (req, res) => {
+Router.get('/message', (req, res) => {
     Messages.find({}, function(err, messages){
         if(err){
             return err
         }
+        res.setHeader('Content-Type', 'application/json');
         res.json(messages);
     })
 })
