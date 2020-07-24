@@ -964,9 +964,7 @@ div#app-wrapper{
                             
                                 div.success{
                                     text-align: center;
-                                    width: 100%;                                                                        
-                                    background-color: rgba(255, 68, 0, 0.058);
-                                    color:  rgba(255, 68, 0, 0.458);                                    
+                                    width: 100%;                                                                                                          
                                     border:none;                                
                                     border-radius: 5px;
                                     visibility: hidden;
@@ -976,7 +974,19 @@ div#app-wrapper{
                                     transition: 200ms ease-in-out;                                    
                                 }                                
                                 div.success.show-success{
-                                    border: 1px solid  rgba(255, 68, 0, 0.458);;
+                                    border: 1px solid  rgba(5, 90, 5, 0.458);
+                                    background-color: rgba(5,90, 5, 0.058);
+                                    color:  rgba(5, 90, 5, 0.458);                                    
+                                    height: auto;
+                                    visibility: visible;
+                                    overflow: auto;
+                                    opacity: 1;
+                                    padding: .5em;
+                                }
+                                div.success.show-fail{
+                                    border: 1px solid  rgba(255, 0, 0, 0.458);
+                                    background-color: rgba(255, 0, 0, 0.058);
+                                    color:  rgba(255, 0, 0, 0.458);                                    
                                     height: auto;
                                     visibility: visible;
                                     overflow: auto;
