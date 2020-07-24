@@ -31,7 +31,7 @@ function sendMessage(e) {
         fail.querySelector('span').textContent = "Please fill all fields..."
 
     }else{
-        fetch(URL, {
+        fetch('/message', {
             method:'POST',            
             headers:{
                 "Content-Type":"application/json"

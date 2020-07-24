@@ -40,6 +40,7 @@ Router.post('/message', (req, res) => {
         email, 
         text
     }            
+    console.log(message)
     const newMessage = new Messages(message);
     newMessage.save().then(msg => {
         res.send(msg);
