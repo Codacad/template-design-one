@@ -25,7 +25,7 @@ Router.get('/singlepageapp', (req, res) => {
     res.render('singlepageapp', {title:"Single Page App", AuthUser:req.user});
 })
 
-Router.get('/messages', (req, res) => {
+Router.get('/api/message', (req, res) => {
     Messages.find({}, function(err, messages){
         if(err){
             return err
